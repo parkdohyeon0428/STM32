@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;250618_GPIO_Baremetal/Src/driver/GPIO/GPIO&apos; to &apos;GPIO.h&apos;" description="Rename resource &apos;GPIO&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/driver/GPIO/GPIO" name="GPIO.h" stamp="1750223254381" updateReferences="true"/>
+</session>
