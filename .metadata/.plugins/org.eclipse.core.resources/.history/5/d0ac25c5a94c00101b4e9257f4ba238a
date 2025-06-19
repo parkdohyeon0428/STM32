@@ -1,0 +1,24 @@
+
+#include <stdint.h>
+#include "GPIO.h"
+#include "LED_Bar.h"
+#include "SystemClock.h"
+#include "stm32f411xe.h"
+
+int main(void)
+{
+	SystemClock_Init();
+	LEDInit();
+
+	uint8_t data = 1;
+
+	while(1)
+	{
+		LEDBar_Write(data);
+		delay(5);
+		data = (data << 1) | (data >> 7);
+	}
+
+	return 0;
+}
+

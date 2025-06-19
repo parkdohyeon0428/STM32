@@ -868,11 +868,11 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0000c933       0x80 ./Src/driver/Led_Bar/LED_Bar.o
  .debug_macro   0x0000c9b3      0x104 ./Src/main.o
 
-.debug_line     0x00000000      0xed8
- .debug_line    0x00000000      0x4cd ./Src/driver/GPIO/GPIO.o
- .debug_line    0x000004cd      0x48f ./Src/driver/Led_Bar/LED_Bar.o
- .debug_line    0x0000095c      0x501 ./Src/main.o
- .debug_line    0x00000e5d       0x7b ./Startup/startup_stm32f411retx.o
+.debug_line     0x00000000      0xed6
+ .debug_line    0x00000000      0x4cb ./Src/driver/GPIO/GPIO.o
+ .debug_line    0x000004cb      0x48f ./Src/driver/Led_Bar/LED_Bar.o
+ .debug_line    0x0000095a      0x501 ./Src/main.o
+ .debug_line    0x00000e5b       0x7b ./Startup/startup_stm32f411retx.o
 
 .debug_str      0x00000000    0x48b21
  .debug_str     0x00000000    0x48b21 ./Src/driver/GPIO/GPIO.o

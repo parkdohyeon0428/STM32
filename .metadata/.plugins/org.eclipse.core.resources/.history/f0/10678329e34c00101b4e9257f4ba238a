@@ -1,0 +1,23 @@
+
+#include <stdint.h>
+
+#include "ap_main.h"
+
+
+int main(void)
+{
+	ap_init();
+	fnd_Init();
+
+	while(1)
+	{
+		ap_main();
+		fnd_Write(0x03);
+
+		FND_SegSel(1);
+	}
+
+
+	return 0;
+}
+

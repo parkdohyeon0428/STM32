@@ -36,49 +36,6 @@ void GPIO_WritePin(GPIO_TypeDef *GPIOx, uint32_t pinNum, pinState pin_State)
 }
 
 
-//void Led_Write(GPIO_TypeDef *GPIOx, uint8_t LEDNum, uint32_t pinNum ,pinState pin_State)
-//{
-//	if(LEDNum[0] == PIN_SET) {
-//		GPIOx-> ODR |= (1U<<pinNum);
-//	} else {
-//	      GPIOx-> ODR &= ~(1U<<pinNum);
-//	   }
-//	if (LEDNum[1] == PIN_SET) {
-//		GPIOx-> ODR |= (1U<<pinNum);
-//	} else {
-//	      GPIOx-> ODR &= ~(1U<<pinNum);
-//	   }
-//	if (LEDNum[2] == PIN_SET) {
-//		GPIOx-> ODR |= (1U<<pinNum);
-//	} else {
-//	      GPIOx-> ODR &= ~(1U<<pinNum);
-//	   }
-//	if (LEDNum[3] == PIN_SET) {
-//		GPIOx-> ODR |= (1U<<pinNum);
-//	} else {
-//	      GPIOx-> ODR &= ~(1U<<pinNum);
-//	   }
-//	if (LEDNum[4] == PIN_SET) {
-//		GPIOx-> ODR |= (1U<<pinNum);
-//	} else {
-//	      GPIOx-> ODR &= ~(1U<<pinNum);
-//	   }
-//	if (LEDNum[5] == PIN_SET) {
-//		GPIOx-> ODR |= (1U<<pinNum);
-//	} else {
-//	      GPIOx-> ODR &= ~(1U<<pinNum);
-//	   }
-//	if (LEDNum[6] == PIN_SET) {
-//		GPIOx-> ODR |= (1U<<pinNum);
-//	} else {
-//	      GPIOx-> ODR &= ~(1U<<pinNum);
-//	   }
-//	if (LEDNum[7] == PIN_SET) {
-//		GPIOx-> ODR |= (1U<<pinNum);
-//	} else {
-//	      GPIOx-> ODR &= ~(1U<<pinNum);
-//	   }
-//}
 
 
 uint32_t GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint32_t pinNum)
