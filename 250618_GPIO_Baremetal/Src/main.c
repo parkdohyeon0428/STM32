@@ -21,25 +21,20 @@
 #include "GPIO.h"
 #include "LED_Bar.h"
 
-#define PERIPH_BASE                (0x40000000UL)           // unsigned 4bytes
-#define APB1PERIPH_OFFSET          (0x00000UL)
-#define APB2PERIPH_OFFSET          (0x10000UL)
+#define PERIPH_BASE       (0x40000000UL) // 모든 주변 장치의 시작 주소 
+#define APB1PERIPH_OFFSET (0x00000UL)    // APB1 버스 기준 주소
+#define APB2PERIPH_OFFSET (0x10000UL)    // APB2 버스 기준 주소
 
-#define AHB1PERIPH_OFFSET          (0x20000UL)
-
+#define AHB1PERIPH_OFFSET (0x20000UL)    // AHB1 버스 기준 주소
 
 #define APB1PERIPH_BASE            (PERIPH_BASE + APB1PERIPH_OFFSET)
 #define APB2PERIPH_BASE            (PERIPH_BASE + APB2PERIPH_OFFSET)
-
 #define AHB1PERIPH_BASE            (PERIPH_BASE + AHB1PERIPH_OFFSET)
-
 
 #define GPIOA_OFFSET (0x0000UL)
 #define GPIOB_OFFSET (0x0400UL)
 #define GPIOC_OFFSET (0x0800UL)
 #define GPIOD_OFFSET (0x0C00UL)
-
-
 
 #define RCC_OFFSET (0x3800UL)
 
@@ -48,14 +43,9 @@
 #define GPIOC_BASE (AHB1PERIPH_BASE + GPIOC_OFFSET)
 #define GPIOD_BASE (AHB1PERIPH_BASE + GPIOD_OFFSET)
 
-
-
-
 #define RCC_BASE   (AHB1PERIPH_BASE + RCC_OFFSET)
 
 #define RCC ((RCC_TypeDef *)(RCC_BASE))
-
-
 
 //#define GPIOA_MODER    *(volatile uint32_t *)(GPIOA_BASE + 0x00)
 //#define GPIOA_OTYPER   *(volatile uint32_t *)(GPIOA_BASE + 0x04)
@@ -67,10 +57,6 @@
 //#define GPIOA_LCKR     *(volatile uint32_t *)(GPIOA_BASE + 0x1C)
 //#define GPIOA_AFRL     *(volatile uint32_t *)(GPIOA_BASE + 0x20)
 //#define GPIOA_AFRH     *(volatile uint32_t *)(GPIOA_BASE + 0x24)
-
-
-
-
 
 //typedef struct {
 //volatile uint32_t MODER;
@@ -84,26 +70,21 @@
 //volatile uint32_t AFR[2];
 //} GPIO_TypeDef;
 
-
-
-#define RCC_AHB1ENR *(volatile uint32_t *) 0x40023830
-
+//#define RCC_AHB1ENR *(volatile uint32_t *) 0x40023830
 
 #define GPIOA ((GPIO_TypeDef *) (GPIOA_BASE))
 #define GPIOB ((GPIO_TypeDef *) (GPIOB_BASE))
 #define GPIOC ((GPIO_TypeDef *) (GPIOC_BASE))
-
-
 
 void delay();
 
 int main(void)
 {
 //   1. 페리페럴에 clock 넣기//
-   RCC -> AHB1ENR |= (1U << 0);//  RCC_AHB1ENR 해당위치의 비트만 1로 만들겠다
-   RCC -> AHB1ENR |= (1U << 1);//  RCC_AHB1ENR 해당위치의 비트만 1로 만들겠다
-   RCC -> AHB1ENR |= (1U << 2);//  RCC_AHB1ENR 해당위치의 비트만 1로 만들겠다
-//   GPIOA -> MODER |= (1U << 10);//GPIOA_MODER
+   RCC -> AHB1ENR |= (1U << 0);  // GPIOA 클럭 활성화
+   RCC -> AHB1ENR |= (1U << 1);  // GPIOB 클럭 활성화
+   RCC -> AHB1ENR |= (1U << 2);  // GPIOC 클럭 활성화
+//   GPIOA -> MODER |=  (1U << 10);  //GPIOA_MODER
 //   GPIOA -> MODER &= ~(1U << 11); // 11번 bit를 0
    GPIO_Init(GPIOA, 0, OUTPUT);
    GPIO_Init(GPIOA, 1, OUTPUT);
