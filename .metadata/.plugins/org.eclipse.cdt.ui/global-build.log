@@ -1,31 +1,84 @@
-17:35:34 **** Incremental Build of configuration Debug for project 250619_counter ****
+19:00:26 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
 make -j16 all 
-arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
-../Src/ap/ap_main.c: In function 'ap_main':
-../Src/ap/ap_main.c:34:9: warning: implicit declaration of function 'FND_DisplayNumber' [-Wimplicit-function-declaration]
-   34 |         FND_DisplayNumber(data);
-      |         ^~~~~~~~~~~~~~~~~
-../Src/ap/ap_main.c:47:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
-   47 |                 if (Button_GetState(&hBtnStop) == ACT_RELEASED)
-      |                 ^~
-../Src/ap/ap_main.c:49:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
-   49 |                         break;
-      |                         ^~~~~
-arm-none-eabi-gcc -o "250619_counter.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250619_counter\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250619_counter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250619_counter.elf
+arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411xE -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250620_watch_stopwatch/Src/ap" -I"D:/STM32/250620_watch_stopwatch/Src/driver" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Button" -I"D:/STM32/250620_watch_stopwatch/Src/driver/FND" -I"D:/STM32/250620_watch_stopwatch/Src/driver/GPIO" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Led_Bar" -I"D:/STM32/250620_watch_stopwatch/Src/driver/SystemClock" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Systick" -I"D:/STM32/250620_watch_stopwatch/Src/driver/TIM" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
+arm-none-eabi-gcc -o "250620_watch_stopwatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250620_watch_stopwatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250620_watch_stopwatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250620_watch_stopwatch.elf
  
-arm-none-eabi-size  250619_counter.elf 
-arm-none-eabi-objdump -h -S 250619_counter.elf  > "250619_counter.list"
+arm-none-eabi-size  250620_watch_stopwatch.elf 
+arm-none-eabi-objdump -h -S 250620_watch_stopwatch.elf  > "250620_watch_stopwatch.list"
    text	   data	    bss	    dec	    hex	filename
-   3132	     96	   1600	   4828	   12dc	250619_counter.elf
+   3468	     96	   1624	   5188	   1444	250620_watch_stopwatch.elf
 Finished building: default.size.stdout
  
-Finished building: 250619_counter.list
+Finished building: 250620_watch_stopwatch.list
  
-17:35:36 **** Incremental Build of configuration Debug for project 250619_counter ****
+19:00:32 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
+make -j16 all 
+arm-none-eabi-size  250620_watch_stopwatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3468	     96	   1624	   5188	   1444	250620_watch_stopwatch.elf
+Finished building: default.size.stdout
+ 
+19:01:00 **** Incremental Build of configuration Debug for project 20250530_VGA_OV7670 ****
+make -j16 all 
+arm-none-eabi-size  20250530_VGA_OV7670.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11840	     16	   1664	  13520	   34d0	20250530_VGA_OV7670.elf
+Finished building: default.size.stdout
+ 
+19:01:00 **** Incremental Build of configuration Debug for project 250518_led ****
+make -j16 all 
+arm-none-eabi-size  250518_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6032	     12	   1572	   7616	   1dc0	250518_led.elf
+Finished building: default.size.stdout
+ 
+19:01:00 **** Incremental Build of configuration Debug for project 250618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  250618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1276	     64	   1568	   2908	    b5c	250618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+19:01:00 **** Incremental Build of configuration Debug for project 250619_button_led ****
+make -j16 all 
+arm-none-eabi-size  250619_button_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1676	     64	   1600	   3340	    d0c	250619_button_led.elf
+Finished building: default.size.stdout
+ 
+19:01:00 **** Incremental Build of configuration Debug for project 250619_counter ****
 make -j16 all 
 arm-none-eabi-size  250619_counter.elf 
    text	   data	    bss	    dec	    hex	filename
-   3132	     96	   1600	   4828	   12dc	250619_counter.elf
+   3196	     96	   1600	   4892	   131c	250619_counter.elf
+Finished building: default.size.stdout
+ 
+19:01:00 **** Incremental Build of configuration Debug for project 250620_FND_TIM_interrupt ****
+make -j16 all 
+arm-none-eabi-size  250620_FND_TIM_interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2280	     96	   1616	   3992	    f98	250620_FND_TIM_interrupt.elf
+Finished building: default.size.stdout
+ 
+19:01:00 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411xE -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250620_watch_stopwatch/Src/ap" -I"D:/STM32/250620_watch_stopwatch/Src/driver" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Button" -I"D:/STM32/250620_watch_stopwatch/Src/driver/FND" -I"D:/STM32/250620_watch_stopwatch/Src/driver/GPIO" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Led_Bar" -I"D:/STM32/250620_watch_stopwatch/Src/driver/SystemClock" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Systick" -I"D:/STM32/250620_watch_stopwatch/Src/driver/TIM" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
+arm-none-eabi-gcc -o "250620_watch_stopwatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250620_watch_stopwatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250620_watch_stopwatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250620_watch_stopwatch.elf
+ 
+arm-none-eabi-size  250620_watch_stopwatch.elf 
+arm-none-eabi-objdump -h -S 250620_watch_stopwatch.elf  > "250620_watch_stopwatch.list"
+   text	   data	    bss	    dec	    hex	filename
+   3464	     96	   1624	   5184	   1440	250620_watch_stopwatch.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250620_watch_stopwatch.list
+ 
+19:01:02 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
+make -j16 all 
+arm-none-eabi-size  250620_watch_stopwatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3464	     96	   1624	   5184	   1440	250620_watch_stopwatch.elf
 Finished building: default.size.stdout
  

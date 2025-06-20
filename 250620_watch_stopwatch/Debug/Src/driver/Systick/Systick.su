@@ -1,0 +1,2 @@
+../Src/driver/Systick/Systick.c:19:6:incTick	4	static
+../Src/driver/Systick/Systick.c:24:10:getTick	4	static

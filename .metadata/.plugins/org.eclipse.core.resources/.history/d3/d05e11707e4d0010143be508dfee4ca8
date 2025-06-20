@@ -1,0 +1,54 @@
+/*
+ * FND.c
+ *
+ *  Created on: Jun 20, 2025
+ *      Author: kccistc
+ */
+
+
+#include "FND.h"
+
+enum {DIGIT1, DIGIT10, DIGIT100, DIGIT1000};
+
+uint16_t fndDispNum = 0; // fnd main data
+
+// write fndDispNum
+void FND_WriteData(uint16_t data)
+{
+	fndDispNum = data;
+}
+// read fndDispNum
+uint16_t FND_ReadData()
+{
+	return fndDispNum;
+}
+// display fndDisNum
+void FND_DispData()
+{
+	static int digitPos = 0;
+	// 인터럽트가 발생하면 한 자리씩 출력
+	digitPos = (digitPos + 1) % 4;
+	switch(digitPos)
+	{
+	case DIGIT1:
+		FND_DispOff(); // 끄고
+		FND_DispDigit(digitPos, fndDispNum%10); // 출력
+		FND_DispOn();  // 키고
+		break;
+	case DIGIT10:
+		FND_DispOff(); // 끄고
+		FND_DispDigit(digitPos, fndDispNum/10%10);
+		FND_DispOn();  // 키고
+		break;
+	case DIGIT100:
+		FND_DispOff(); // 끄고
+		FND_DispDigit(digitPos, fndDispNum/100%10);
+		FND_DispOn();  // 키고
+		break;
+	case DIGIT1000:
+		FND_DispOff(); // 끄고
+		FND_DispDigit(digitPos, fndDispNum/1000%10);
+		FND_DispOn();  // 키고
+		break;
+	}
+}

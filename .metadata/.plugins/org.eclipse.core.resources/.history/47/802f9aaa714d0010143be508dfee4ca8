@@ -1,0 +1,78 @@
+
+#include "ap_main.h"
+
+enum {Start, Stop, Clear};
+
+Button_Handler_t hBtnStart;
+Button_Handler_t hBtnStop;
+Button_Handler_t hBtnClear;
+
+
+int ap_main()
+{
+
+
+    //uint8_t data = 1;
+    int led_state = Stop;
+    uint32_t data = 0;
+    uint32_t sec = 0;
+//	FND_SegSel(0);
+//	FND_SegSel(1);
+//	FND_SegSel(2);
+//	FND_SegSel(3);
+//	fnd_Write(0x01);
+
+
+    //int btn_state = 0;
+
+    while (1)
+    {
+//    	FND_SegSel(0);
+//		FND_SegSel(1);
+//		FND_SegSel(2);
+//		FND_SegSel(3);
+//		fnd_Write(0x01);
+
+        switch (led_state)
+        {
+        case Stop:
+        	FND_DisplayNumber(data);
+        	if (Button_GetState(&hBtnStart) == ACT_RELEASED)
+        		led_state = Start;
+        	else if (Button_GetState(&hBtnClear) == ACT_RELEASED)
+        		led_state = Clear;
+        	break;
+
+        case Start:
+        	for	(int i = 0; i < 500; i++) {
+        		FND_DisplayNumber(data);
+        		// 500번 동안 같은 숫자 출력
+        	}
+			data = (data + 1) % 10000; // 10000 넘어가면 다시 0
+        	if (Button_GetState(&hBtnStop) == ACT_RELEASED)
+        		led_state = Stop;
+			break;
+
+        case Clear:
+        	FND_DisplayNumber(data = 0);
+
+        	if (Button_GetState(&hBtnStart) == ACT_RELEASED)
+				led_state = Start;
+			break;
+
+        }
+
+    }
+
+    return 0;
+}
+
+
+void ap_init()
+{
+	SystemClock_Init();
+	LEDBar_Init();
+    Button_Init(&hBtnClear, GPIOB, 5);
+    Button_Init(&hBtnStart, GPIOB, 3);
+    Button_Init(&hBtnStop, GPIOA, 10);
+}

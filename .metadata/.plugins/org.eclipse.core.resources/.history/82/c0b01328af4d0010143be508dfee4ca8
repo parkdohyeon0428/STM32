@@ -1,0 +1,88 @@
+#include "ap_main.h"
+
+enum{MODE, STOP, RUN, CLEAR}; //상태 만들고
+enum{Watch, Stopwatch};
+
+Button_Handler_t hbtnmode;
+Button_Handler_t hbtnrun;
+Button_Handler_t hbtnclear;
+
+void TIM2_IRQHandler(void)
+{
+	incTick();
+	FND_DispData();
+	TIM_ClearUIFlag(TIM2);
+}
+
+int ap_main()
+{
+	uint32_t count = 1200;
+   uint32_t counter = 0;
+   uint32_t prevCounterTime = 0;
+   int mode = Watch;
+   int state = STOP;
+   while(1)
+   {
+	   if (mode == Watch) {
+		  FND_WriteData(count);
+		  if (getTick() - prevCounterTime >= 2000) {
+			  prevCounterTime = getTick();
+			  FND_WriteData(count++);
+		  if (Button_GetState(&hbtnmode) == ACT_RELEASED)
+			  mode = Stopwatch;
+		  }
+	   } else if (mode == Stopwatch) {
+		  switch (state)
+		  {
+		  case STOP:
+			  FND_WriteData(counter);
+			  if (Button_GetState(&hbtnrun) == ACT_RELEASED)
+				  state = RUN;
+			  else if (Button_GetState(&hbtnclear) == ACT_RELEASED)
+					state = CLEAR;
+			  else if (Button_GetState(&hbtnmode) == ACT_RELEASED)
+				  state = Watch;
+			  break;
+		  case RUN:
+			  if (getTick() - prevCounterTime >= 1000) {
+				  prevCounterTime = getTick();
+				  FND_WriteData(counter++);
+			  }
+			  else if (Button_GetState(&hbtnrun) == ACT_RELEASED)
+				  state = STOP;
+			  else if (Button_GetState(&hbtnmode) == ACT_RELEASED)
+				  state = Watch;
+			  break;
+		  case CLEAR:
+			  FND_WriteData(counter = 0);
+			  if (Button_GetState(&hbtnrun) == ACT_RELEASED)
+				  state = RUN;
+			  else if (Button_GetState(&hbtnmode) == ACT_RELEASED)
+				  state = Watch;
+			  break;
+		  //delay(300);
+		  }
+//      delay(1);
+	  }
+   }
+
+   return 0;
+}
+
+void ap_init()
+{
+   SystemClock_Init();
+
+   Button_Init(&hbtnclear, GPIOB, 5);
+   Button_Init(&hbtnrun, GPIOB, 3);
+   Button_Init(&hbtnmode, GPIOA, 10);
+   FND_Init();
+   TIM_Init(TIM2, 16-1, 1000-1);
+   TIM_CntStart(TIM2);
+   TIM_UIEnable(TIM2);
+   NVIC_EnableIRQ(TIM2_IRQn); // interrupt 루틴 요청 enable
+//
+//   TIM_Init(TIM5, 16000-1, 0xffffffff);
+//   SysTick_Init(TIM5);
+//   SysTick_Start();
+}

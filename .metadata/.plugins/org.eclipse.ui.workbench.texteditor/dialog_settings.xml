@@ -3,6 +3,14 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="Typedef"/>
+		<item value="Typedef TIM"/>
+		<item value="Typedef TIM2"/>
+		<item value="TIM2_IRQn"/>
+		<item value="NVIC_EnableIRQ"/>
+		<item value="TIM_TypeDef"/>
+		<item value="TIM2"/>
+		<item value="DISpaly"/>
 		<item value="AHB1ENR"/>
 		<item value="BK"/>
 		<item value="core"/>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;250620_upcounter&apos; to &apos;250620_FND_TIM_interrupt&apos;" description="Rename resource &apos;250620_upcounter&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/250620_upcounter" name="250620_FND_TIM_interrupt" stamp="1750383673176" updateReferences="true"/>&#x0A;<refactoring comment="Delete resource &apos;250620_FND_TIM_interrupt/Src/driver/fnd&apos;" deleteContents="false" description="Delete resource &apos;250620_FND_TIM_interrupt/Src/driver/fnd&apos;" element1="/250620_FND_TIM_interrupt/Src/driver/fnd" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1750384000925"/>
+</session>
