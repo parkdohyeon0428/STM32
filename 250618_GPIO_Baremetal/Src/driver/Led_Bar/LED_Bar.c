@@ -5,15 +5,16 @@
  *      Author: kccistc
  */
 
-#include "LED_Bar.h"
+#include "LED_Bar.h" // 헤더에서 GPIO.h 포함해서 
+                     // 여기서 GPIO 함수 사용가능
 
 typedef struct{
-	GPIO_TypeDef *GPIOx;
+	GPIO_TypeDef *GPIOx; // "stm32f411.h" 에 있는 구조체
 	uint32_t pinNum;
 } LED_Bar_TypeDef;
 
 LED_Bar_TypeDef ledBar[8] = {
-		{GPIOA, 0},
+		{GPIOA, 0}, // {GPIO type, pinNum} 
 		{GPIOA, 1},
 		{GPIOA, 4},
 		{GPIOB, 0},
