@@ -10,31 +10,34 @@ Button_Handler_t hbtnclear;
 int mod = 0;
 int mod1 = 0;
 
+int mode = Watch;
+int state = STOP;
+
 void TIM2_IRQHandler(void)
 {
 	static int cou = 0;
 	cou ++;
 	incTick();
-	//if (mode == Watch) {
+	if (mode == Watch) {
 		if(cou % 1000 <500)
 		{
 			FND_DispData_DOT(mod);
+		} else {
+			FND_DispData();
 		}
 
-
-	//else if (mode == Stopwatch) {
-		//else if(cou % 1000 <100)
-//		{
-//			FND_DispData_DOT(mod1);
-//		}
+	}
+	else if (mode == Stopwatch) {
+		if(cou % 1000 <100)
+		{
+			FND_DispData_DOT(mod1);
+		}
 		else
 		{
 			FND_DispData();
 		}
-
-
+	}
 	TIM_ClearUIFlag(TIM2);
-
 
 }
 
@@ -42,23 +45,33 @@ void TIM2_IRQHandler(void)
 
 int ap_main()
 {
-   uint32_t count = 1200;
+   uint32_t count = 0;
+   uint32_t hour = 0;
+
    uint32_t counter = 0;
+   uint32_t min = 0;
+
 
    uint32_t wcounter = 0;
    uint32_t prevCounterTime = 0;
-   int mode = Watch;
-   int state = STOP;
+
    while(1)
    {
-	   if (getTick() - wcounter >= 10000) {
+	   if (getTick() - wcounter >= 50) {
 		   wcounter = getTick();
 		   count++;
+		   if (count % 60 == 0) {
+			   hour = hour + 100;
+			   count = 0;
+			   if (hour == 1200) {
+				   hour = 0;
+			   }
+		   }
 	   }
 	   switch (mode)
 	   {
 	   case  Watch:
-		  FND_WriteData(count);
+		  FND_WriteData(1200+hour+count);
 		  mod = 0b0100;
 		  if (getTick() - prevCounterTime >= 100) {
 			  prevCounterTime = getTick();
@@ -70,26 +83,33 @@ int ap_main()
 			  mode = Stopwatch;
 		  }
 		  break;
-	   case Stopwatch:
-		   mod = 0b1010;
+	    case Stopwatch:
+		   mod1 = 0b1010;
 		   switch (state)
 			  {
 			  case STOP:
 				  //count ++;
-				  FND_WriteData(counter);
+				  FND_WriteData(min+counter);
 				  if (Button_GetState(&hbtnrun) == ACT_RELEASED)
 					  state = RUN;
-				  else if (Button_GetState(&hbtnclear) == ACT_RELEASED)
+				  else if (Button_GetState(&hbtnclear) == ACT_RELEASED)  {
 						state = CLEAR;
+				  	  	min = 0;
+				  	  	counter = 0;
+				  }
 				  else if (Button_GetState(&hbtnmode) == ACT_RELEASED)
 					  mode = Watch;
 				  break;
 			  case RUN:
 				  //count ++;
-				  if (getTick() - prevCounterTime >= 100) {
+				  if (getTick() - prevCounterTime >= 10) {
 					  prevCounterTime = getTick();
-					  FND_WriteData(counter++);
-
+					  counter ++;
+					  if (counter % 600 == 0) {
+						  min = min + 1000;
+						  counter = 0;
+					  }
+					  FND_WriteData(min + counter);
 				  }
 				  else if (Button_GetState(&hbtnrun) == ACT_RELEASED)
 					  state = STOP;
@@ -98,57 +118,14 @@ int ap_main()
 				  break;
 			  case CLEAR:
 				  //count ++;
-				  FND_WriteData(counter = 0);
+				  FND_WriteData(min + counter);
 				  if (Button_GetState(&hbtnrun) == ACT_RELEASED)
 					  state = RUN;
 				  else if (Button_GetState(&hbtnmode) == ACT_RELEASED)
 					  mode = Watch;
 				  break;
-	   }
-//	   if (mode == Watch) {
-//		  FND_WriteData(count);
-//		  if (getTick() - wcounter >= 2000) {
-//			  wcounter = getTick();
-//			  FND_WriteData(count++);
-//		  }
-//		  if (Button_GetState(&hbtnmode) == ACT_RELEASED)
-//		  {
-//			  mode = Stopwatch;
-//		  }
-//	   }
-	   //else if (mode == Stopwatch) {
-//		  switch (state)
-//		  {
-//		  case STOP:
-//			  FND_WriteData(counter);
-//			  if (Button_GetState(&hbtnrun) == ACT_RELEASED)
-//				  state = RUN;
-//			  else if (Button_GetState(&hbtnclear) == ACT_RELEASED)
-//					state = CLEAR;
-//			  else if (Button_GetState(&hbtnmode) == ACT_RELEASED)
-//				  mode = Watch;
-//			  break;
-//		  case RUN:
-//			  if (getTick() - prevCounterTime >= 1000) {
-//				  prevCounterTime = getTick();
-//				  FND_WriteData(counter++);
-//			  }
-//			  else if (Button_GetState(&hbtnrun) == ACT_RELEASED)
-//				  state = STOP;
-//			  else if (Button_GetState(&hbtnmode) == ACT_RELEASED)
-//				  mode = Watch;
-//			  break;
-//		  case CLEAR:
-//			  FND_WriteData(counter = 0);
-//			  if (Button_GetState(&hbtnrun) == ACT_RELEASED)
-//				  state = RUN;
-//			  else if (Button_GetState(&hbtnmode) == ACT_RELEASED)
-//				  mode = Watch;
-//			  break;
-		  //delay(300);
-//		  }
-////      delay(1);
-//	  }
+			  }
+
           }
    }
    return 0;

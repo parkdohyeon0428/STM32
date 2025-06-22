@@ -1,4 +1,2 @@
-../Src/driver/Systick/Systick.c:12:6:SysTick_Init	1
+../Src/driver/Systick/Systick.c:12:6:incTick	1
 ../Src/driver/Systick/Systick.c:17:10:getTick	1
-../Src/driver/Systick/Systick.c:22:6:SysTick_Start	1
-../Src/driver/Systick/Systick.c:27:6:SysTick_Stop	1

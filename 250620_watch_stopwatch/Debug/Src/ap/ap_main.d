@@ -1,27 +1,27 @@
 Src/ap/ap_main.o: ../Src/ap/ap_main.c ../Src/ap/ap_main.h \
- D:/STM32/250620_watch_stopwatch/Src/driver/GPIO/GPIO.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/GPIO/GPIO.h \
  ../Inc/stm32f411xe.h ../Inc/core_cm4.h ../Inc/cmsis_version.h \
  ../Inc/cmsis_compiler.h ../Inc/cmsis_gcc.h ../Inc/mpu_armv7.h \
- D:/STM32/250620_watch_stopwatch/Src/driver/Led_Bar/LED_Bar.h \
- D:/STM32/250620_watch_stopwatch/Src/driver/SystemClock/SystemClock.h \
- D:/STM32/250620_watch_stopwatch/Src/driver/Button/Button.h \
- D:/STM32/250620_watch_stopwatch/Src/driver/FND/FND.h ../Inc/stm32f4xx.h \
- ../Inc/stm32f411xe.h \
- D:/STM32/250620_watch_stopwatch/Src/driver/TIM/TIM.h \
- D:/STM32/250620_watch_stopwatch/Src/driver/Systick/Systick.h
+ C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/Led_Bar/LED_Bar.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/SystemClock/SystemClock.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/Button/Button.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/FND/FND.h \
+ ../Inc/stm32f4xx.h ../Inc/stm32f411xe.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/TIM/TIM.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/Systick/Systick.h
 ../Src/ap/ap_main.h:
-D:/STM32/250620_watch_stopwatch/Src/driver/GPIO/GPIO.h:
+C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/GPIO/GPIO.h:
 ../Inc/stm32f411xe.h:
 ../Inc/core_cm4.h:
 ../Inc/cmsis_version.h:
 ../Inc/cmsis_compiler.h:
 ../Inc/cmsis_gcc.h:
 ../Inc/mpu_armv7.h:
-D:/STM32/250620_watch_stopwatch/Src/driver/Led_Bar/LED_Bar.h:
-D:/STM32/250620_watch_stopwatch/Src/driver/SystemClock/SystemClock.h:
-D:/STM32/250620_watch_stopwatch/Src/driver/Button/Button.h:
-D:/STM32/250620_watch_stopwatch/Src/driver/FND/FND.h:
+C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/Led_Bar/LED_Bar.h:
+C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/SystemClock/SystemClock.h:
+C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/Button/Button.h:
+C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/FND/FND.h:
 ../Inc/stm32f4xx.h:
 ../Inc/stm32f411xe.h:
-D:/STM32/250620_watch_stopwatch/Src/driver/TIM/TIM.h:
-D:/STM32/250620_watch_stopwatch/Src/driver/Systick/Systick.h:
+C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/TIM/TIM.h:
+C:/Users/user/Desktop/stm32/STM32/250620_watch_stopwatch/Src/driver/Systick/Systick.h:

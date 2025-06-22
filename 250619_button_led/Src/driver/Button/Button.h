@@ -12,12 +12,13 @@
 #include "SystemClock.h"
 
 typedef enum {NO_ACT, ACT_PUSHED, ACT_RELEASED} button_state_t;
+// 버튼 동작을 추상화한 enum
 
 typedef struct {
 	GPIO_TypeDef *GPIOx;
 	uint32_t pinNum;
 	uint32_t prevState;
-}Button_Handler_t;
+}Button_Handler_t; // 버튼 객체를 위한 구조체
 
 //void Button_Init();
 void Button_Init(Button_Handler_t *hbtn, GPIO_TypeDef *GPIOx, uint32_t pinNum);

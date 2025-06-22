@@ -15,7 +15,6 @@ int ap_main()
     //uint8_t data = 1;
     int led_state = Stop;
     uint32_t data = 0;
-    uint32_t sec = 0;
 //	FND_SegSel(0);
 //	FND_SegSel(1);
 //	FND_SegSel(2);
@@ -32,11 +31,11 @@ int ap_main()
 //		FND_SegSel(2);
 //		FND_SegSel(3);
 //		fnd_Write(0x01);
+    	FND_DisplayNumber(data);
 
         switch (led_state)
         {
         case Stop:
-        	FND_DisplayNumber(data);
         	if (Button_GetState(&hBtnStart) == ACT_RELEASED)
         		led_state = Start;
         	else if (Button_GetState(&hBtnClear) == ACT_RELEASED)
@@ -44,19 +43,13 @@ int ap_main()
         	break;
 
         case Start:
-        	for (int i = 0; i < 500; i++) {
-        		FND_DisplayNumber(data);
-        		if (Button_GetState(&hBtnStop) == ACT_RELEASED) {
-        			led_state = Stop;
-        			break;
-        		}
-        	}
-        	if (led_state != Stop)
-        		data = (data + 1) % 10000;
-        	break;
+        	data += 1;
+        	if (Button_GetState(&hBtnStop) == ACT_RELEASED)
+        		led_state = Stop;
+			break;
 
         case Clear:
-        	FND_DisplayNumber(data = 0);
+        	data = 0;
         	if (Button_GetState(&hBtnStart) == ACT_RELEASED)
 				led_state = Start;
 			break;
