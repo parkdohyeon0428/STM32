@@ -1,0 +1,13 @@
+#ifndef AP_AP_MAIN_H_
+#define AP_AP_MAIN_H_
+
+#include "stm32f4xx_hal.h"
+#include "LED_Bar.h"
+#include "Button.h"
+#include "FND.h"
+
+
+int ap_main();
+void ap_init();
+
+#endif

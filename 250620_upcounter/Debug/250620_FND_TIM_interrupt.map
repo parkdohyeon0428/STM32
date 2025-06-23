@@ -222,8 +222,8 @@ Discarded input sections
  .debug_macro   0x00000000     0x1011 ./Src/driver/Led_Bar/LED_Bar.o
  .debug_macro   0x00000000      0x11f ./Src/driver/Led_Bar/LED_Bar.o
  .debug_macro   0x00000000     0xb968 ./Src/driver/Led_Bar/LED_Bar.o
- .debug_line    0x00000000      0x514 ./Src/driver/Led_Bar/LED_Bar.o
- .debug_str     0x00000000    0x4f840 ./Src/driver/Led_Bar/LED_Bar.o
+ .debug_line    0x00000000      0x4fb ./Src/driver/Led_Bar/LED_Bar.o
+ .debug_str     0x00000000    0x4f827 ./Src/driver/Led_Bar/LED_Bar.o
  .comment       0x00000000       0x44 ./Src/driver/Led_Bar/LED_Bar.o
  .debug_frame   0x00000000       0x50 ./Src/driver/Led_Bar/LED_Bar.o
  .ARM.attributes
@@ -505,7 +505,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 ./Src/syscalls.o
  .debug_macro   0x00000000       0xce ./Src/syscalls.o
  .debug_line    0x00000000      0x8a7 ./Src/syscalls.o
- .debug_str     0x00000000     0x99e9 ./Src/syscalls.o
+ .debug_str     0x00000000     0x99d0 ./Src/syscalls.o
  .comment       0x00000000       0x44 ./Src/syscalls.o
  .debug_frame   0x00000000      0x2ac ./Src/syscalls.o
  .ARM.attributes
@@ -570,7 +570,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6a ./Src/sysmem.o
  .debug_macro   0x00000000      0x1df ./Src/sysmem.o
  .debug_line    0x00000000      0x583 ./Src/sysmem.o
- .debug_str     0x00000000     0x7787 ./Src/sysmem.o
+ .debug_str     0x00000000     0x776e ./Src/sysmem.o
  .comment       0x00000000       0x44 ./Src/sysmem.o
  .debug_frame   0x00000000       0x34 ./Src/sysmem.o
  .ARM.attributes
@@ -1266,28 +1266,28 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0000e0d2       0xdb ./Src/driver/TIM/TIM.o
  .debug_macro   0x0000e1ad      0x117 ./Src/main.o
 
-.debug_line     0x00000000     0x2ef7
- .debug_line    0x00000000      0x74b ./Src/ap/ap_main.o
- .debug_line    0x0000074b      0x584 ./Src/driver/Button/Button.o
- .debug_line    0x00000ccf      0x601 ./Src/driver/FND/FND.o
- .debug_line    0x000012d0      0x51e ./Src/driver/GPIO/GPIO.o
- .debug_line    0x000017ee      0x4f1 ./Src/driver/SystemClock/SystemClock.o
- .debug_line    0x00001cdf      0x4b4 ./Src/driver/Systick/Systick.o
- .debug_line    0x00002193      0x5ed ./Src/driver/TIM/TIM.o
- .debug_line    0x00002780      0x6fc ./Src/main.o
- .debug_line    0x00002e7c       0x7b ./Startup/startup_stm32f411retx.o
+.debug_line     0x00000000     0x2d1c
+ .debug_line    0x00000000      0x69c ./Src/ap/ap_main.o
+ .debug_line    0x0000069c      0x552 ./Src/driver/Button/Button.o
+ .debug_line    0x00000bee      0x5e8 ./Src/driver/FND/FND.o
+ .debug_line    0x000011d6      0x51e ./Src/driver/GPIO/GPIO.o
+ .debug_line    0x000016f4      0x4f1 ./Src/driver/SystemClock/SystemClock.o
+ .debug_line    0x00001be5      0x4b4 ./Src/driver/Systick/Systick.o
+ .debug_line    0x00002099      0x5d4 ./Src/driver/TIM/TIM.o
+ .debug_line    0x0000266d      0x634 ./Src/main.o
+ .debug_line    0x00002ca1       0x7b ./Startup/startup_stm32f411retx.o
 
-.debug_str      0x00000000    0x50705
- .debug_str     0x00000000    0x50705 ./Src/ap/ap_main.o
-                              0x504dd (size before relaxing)
- .debug_str     0x00050705    0x4f885 ./Src/driver/Button/Button.o
- .debug_str     0x00050705    0x50008 ./Src/driver/FND/FND.o
- .debug_str     0x00050705    0x4f807 ./Src/driver/GPIO/GPIO.o
- .debug_str     0x00050705    0x4f897 ./Src/driver/SystemClock/SystemClock.o
- .debug_str     0x00050705    0x4fe93 ./Src/driver/Systick/Systick.o
- .debug_str     0x00050705    0x4ff65 ./Src/driver/TIM/TIM.o
- .debug_str     0x00050705    0x4ff0e ./Src/main.o
- .debug_str     0x00050705       0x78 ./Startup/startup_stm32f411retx.o
+.debug_str      0x00000000    0x506ec
+ .debug_str     0x00000000    0x506ec ./Src/ap/ap_main.o
+                              0x504c4 (size before relaxing)
+ .debug_str     0x000506ec    0x4f86c ./Src/driver/Button/Button.o
+ .debug_str     0x000506ec    0x4ffef ./Src/driver/FND/FND.o
+ .debug_str     0x000506ec    0x4f7ee ./Src/driver/GPIO/GPIO.o
+ .debug_str     0x000506ec    0x4f87e ./Src/driver/SystemClock/SystemClock.o
+ .debug_str     0x000506ec    0x4fe7a ./Src/driver/Systick/Systick.o
+ .debug_str     0x000506ec    0x4ff4c ./Src/driver/TIM/TIM.o
+ .debug_str     0x000506ec    0x4fef5 ./Src/main.o
+ .debug_str     0x000506ec       0x5f ./Startup/startup_stm32f411retx.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 ./Src/ap/ap_main.o
@@ -1312,6 +1312,6 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_frame   0x00000580       0x2c C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
 
 .debug_line_str
-                0x00000000       0x5c
+                0x00000000       0x43
  .debug_line_str
-                0x00000000       0x5c ./Startup/startup_stm32f411retx.o
+                0x00000000       0x43 ./Startup/startup_stm32f411retx.o

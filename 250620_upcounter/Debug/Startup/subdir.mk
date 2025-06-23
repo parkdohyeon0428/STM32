@@ -16,7 +16,7 @@ S_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Startup/%.o: ../Startup/%.s Startup/subdir.mk
-	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -DSTM32F411xE -DSTM32F411RETx -DSTM32F4 -DSTM32 -c -I"C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/GPIO" -I"C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/Led_Bar" -I"C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/SystemClock" -I"C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/FND" -I"C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/Button" -I"C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver" -I"C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/ap" -I"C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/TIM" -I"C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/Systick" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -DSTM32F411xE -DSTM32F411RETx -DSTM32F4 -DSTM32 -c -I"D:/STM32/250620_upcounter/Src/driver/GPIO" -I"D:/STM32/250620_upcounter/Src/driver/Led_Bar" -I"D:/STM32/250620_upcounter/Src/driver/SystemClock" -I"D:/STM32/250620_upcounter/Src/driver/FND" -I"D:/STM32/250620_upcounter/Src/driver/Button" -I"D:/STM32/250620_upcounter/Src/driver" -I"D:/STM32/250620_upcounter/Src/ap" -I"D:/STM32/250620_upcounter/Src/driver/TIM" -I"D:/STM32/250620_upcounter/Src/driver/Systick" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@" "$<"
 
 clean: clean-Startup
 

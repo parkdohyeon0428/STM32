@@ -1,10 +1,10 @@
-19:01:00 **** Incremental Build of configuration Debug for project 250619_counter ****
+17:24:20 **** Incremental Build of configuration Debug for project 250619_counter ****
 make -j16 all 
 arm-none-eabi-size  250619_counter.elf 
    text	   data	    bss	    dec	    hex	filename
-   3196	     96	   1600	   4892	   131c	250619_counter.elf
+   3132	     96	   1600	   4828	   12dc	250619_counter.elf
 Finished building: default.size.stdout
  
 
-19:01:00 Build Finished. 0 errors, 0 warnings. (took 131ms)
+17:24:20 Build Finished. 0 errors, 0 warnings. (took 133ms)
 

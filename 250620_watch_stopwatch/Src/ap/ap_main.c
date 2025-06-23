@@ -51,13 +51,12 @@ int ap_main()
    uint32_t counter = 0;
    uint32_t min = 0;
 
-
    uint32_t wcounter = 0;
    uint32_t prevCounterTime = 0;
 
    while(1)
    {
-	   if (getTick() - wcounter >= 50) {
+	   if (getTick() - wcounter >= 6000) {
 		   wcounter = getTick();
 		   count++;
 		   if (count % 60 == 0) {

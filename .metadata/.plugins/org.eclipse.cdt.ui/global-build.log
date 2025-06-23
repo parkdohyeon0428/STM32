@@ -1,84 +1,221 @@
-19:00:26 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
+17:21:42 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
 make -j16 all 
-arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411xE -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250620_watch_stopwatch/Src/ap" -I"D:/STM32/250620_watch_stopwatch/Src/driver" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Button" -I"D:/STM32/250620_watch_stopwatch/Src/driver/FND" -I"D:/STM32/250620_watch_stopwatch/Src/driver/GPIO" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Led_Bar" -I"D:/STM32/250620_watch_stopwatch/Src/driver/SystemClock" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Systick" -I"D:/STM32/250620_watch_stopwatch/Src/driver/TIM" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
-arm-none-eabi-gcc -o "250620_watch_stopwatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250620_watch_stopwatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250620_watch_stopwatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250620_watch_stopwatch.elf
+arm-none-eabi-gcc "../Core/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/STM32/250623_TimeWatch_StopWatch/Core/ap" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/Button" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/FND" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/LedBar" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/ap_main.d" -MT"Core/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/ap_main.o"
+arm-none-eabi-gcc -o "250623_TimeWatch_StopWatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250623_TimeWatch_StopWatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250623_TimeWatch_StopWatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250623_TimeWatch_StopWatch.elf
  
-arm-none-eabi-size  250620_watch_stopwatch.elf 
-arm-none-eabi-objdump -h -S 250620_watch_stopwatch.elf  > "250620_watch_stopwatch.list"
+arm-none-eabi-size  250623_TimeWatch_StopWatch.elf 
+arm-none-eabi-objdump -h -S 250623_TimeWatch_StopWatch.elf  > "250623_TimeWatch_StopWatch.list"
    text	   data	    bss	    dec	    hex	filename
-   3468	     96	   1624	   5188	   1444	250620_watch_stopwatch.elf
+  11016	    120	   1704	  12840	   3228	250623_TimeWatch_StopWatch.elf
 Finished building: default.size.stdout
  
-Finished building: 250620_watch_stopwatch.list
+Finished building: 250623_TimeWatch_StopWatch.list
  
-19:00:32 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
+17:21:43 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
 make -j16 all 
-arm-none-eabi-size  250620_watch_stopwatch.elf 
+arm-none-eabi-size  250623_TimeWatch_StopWatch.elf 
    text	   data	    bss	    dec	    hex	filename
-   3468	     96	   1624	   5188	   1444	250620_watch_stopwatch.elf
+  11016	    120	   1704	  12840	   3228	250623_TimeWatch_StopWatch.elf
 Finished building: default.size.stdout
  
-19:01:00 **** Incremental Build of configuration Debug for project 20250530_VGA_OV7670 ****
+17:24:02 **** Incremental Build of configuration Debug for project 20250530_VGA_OV7670 ****
 make -j16 all 
 arm-none-eabi-size  20250530_VGA_OV7670.elf 
    text	   data	    bss	    dec	    hex	filename
   11840	     16	   1664	  13520	   34d0	20250530_VGA_OV7670.elf
 Finished building: default.size.stdout
  
-19:01:00 **** Incremental Build of configuration Debug for project 250518_led ****
+17:24:02 **** Incremental Build of configuration Debug for project 250518_led ****
 make -j16 all 
 arm-none-eabi-size  250518_led.elf 
    text	   data	    bss	    dec	    hex	filename
    6032	     12	   1572	   7616	   1dc0	250518_led.elf
 Finished building: default.size.stdout
  
-19:01:00 **** Incremental Build of configuration Debug for project 250618_GPIO_Baremetal ****
+17:24:02 **** Incremental Build of configuration Debug for project 250618_GPIO_Baremetal ****
 make -j16 all 
 arm-none-eabi-size  250618_GPIO_Baremetal.elf 
    text	   data	    bss	    dec	    hex	filename
    1276	     64	   1568	   2908	    b5c	250618_GPIO_Baremetal.elf
 Finished building: default.size.stdout
  
-19:01:00 **** Incremental Build of configuration Debug for project 250619_button_led ****
+17:24:02 **** Incremental Build of configuration Debug for project 250619_button_led ****
 make -j16 all 
 arm-none-eabi-size  250619_button_led.elf 
    text	   data	    bss	    dec	    hex	filename
    1676	     64	   1600	   3340	    d0c	250619_button_led.elf
 Finished building: default.size.stdout
  
-19:01:00 **** Incremental Build of configuration Debug for project 250619_counter ****
+17:24:02 **** Incremental Build of configuration Debug for project 250619_counter ****
 make -j16 all 
 arm-none-eabi-size  250619_counter.elf 
    text	   data	    bss	    dec	    hex	filename
-   3196	     96	   1600	   4892	   131c	250619_counter.elf
+   3132	     96	   1600	   4828	   12dc	250619_counter.elf
 Finished building: default.size.stdout
  
-19:01:00 **** Incremental Build of configuration Debug for project 250620_FND_TIM_interrupt ****
+17:24:03 **** Incremental Build of configuration Debug for project 250620_FND_TIM_interrupt ****
 make -j16 all 
 arm-none-eabi-size  250620_FND_TIM_interrupt.elf 
    text	   data	    bss	    dec	    hex	filename
-   2280	     96	   1616	   3992	    f98	250620_FND_TIM_interrupt.elf
+   2212	     96	   1616	   3924	    f54	250620_FND_TIM_interrupt.elf
 Finished building: default.size.stdout
  
-19:01:00 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
-make -j16 all 
-arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411xE -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250620_watch_stopwatch/Src/ap" -I"D:/STM32/250620_watch_stopwatch/Src/driver" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Button" -I"D:/STM32/250620_watch_stopwatch/Src/driver/FND" -I"D:/STM32/250620_watch_stopwatch/Src/driver/GPIO" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Led_Bar" -I"D:/STM32/250620_watch_stopwatch/Src/driver/SystemClock" -I"D:/STM32/250620_watch_stopwatch/Src/driver/Systick" -I"D:/STM32/250620_watch_stopwatch/Src/driver/TIM" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
-arm-none-eabi-gcc -o "250620_watch_stopwatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250620_watch_stopwatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250620_watch_stopwatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250620_watch_stopwatch.elf
- 
-arm-none-eabi-size  250620_watch_stopwatch.elf 
-arm-none-eabi-objdump -h -S 250620_watch_stopwatch.elf  > "250620_watch_stopwatch.list"
-   text	   data	    bss	    dec	    hex	filename
-   3464	     96	   1624	   5184	   1440	250620_watch_stopwatch.elf
-Finished building: default.size.stdout
- 
-Finished building: 250620_watch_stopwatch.list
- 
-19:01:02 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
+17:24:03 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
 make -j16 all 
 arm-none-eabi-size  250620_watch_stopwatch.elf 
    text	   data	    bss	    dec	    hex	filename
-   3464	     96	   1624	   5184	   1440	250620_watch_stopwatch.elf
+   3700	    100	   1636	   5436	   153c	250620_watch_stopwatch.elf
+Finished building: default.size.stdout
+ 
+17:24:03 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/STM32/250623_TimeWatch_StopWatch/Core/ap" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/Button" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/FND" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/LedBar" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:91:3: error: 'ap_ihBtnClear' undeclared (first use in this function); did you mean 'hBtnClear'?
+   91 |   ap_ihBtnClear
+      |   ^~~~~~~~~~~~~
+      |   hBtnClear
+../Core/Src/main.c:91:3: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:91:16: error: expected ';' before 'while'
+   91 |   ap_ihBtnClear
+      |                ^
+      |                ;
+......
+   98 |   while (1)
+      |   ~~~~~         
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:24:12 **** Incremental Build of configuration Debug for project 20250530_VGA_OV7670 ****
+make -j16 all 
+arm-none-eabi-size  20250530_VGA_OV7670.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11840	     16	   1664	  13520	   34d0	20250530_VGA_OV7670.elf
+Finished building: default.size.stdout
+ 
+17:24:12 **** Incremental Build of configuration Debug for project 250518_led ****
+make -j16 all 
+arm-none-eabi-size  250518_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6032	     12	   1572	   7616	   1dc0	250518_led.elf
+Finished building: default.size.stdout
+ 
+17:24:12 **** Incremental Build of configuration Debug for project 250618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  250618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1276	     64	   1568	   2908	    b5c	250618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+17:24:12 **** Incremental Build of configuration Debug for project 250619_button_led ****
+make -j16 all 
+arm-none-eabi-size  250619_button_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1676	     64	   1600	   3340	    d0c	250619_button_led.elf
+Finished building: default.size.stdout
+ 
+17:24:12 **** Incremental Build of configuration Debug for project 250619_counter ****
+make -j16 all 
+arm-none-eabi-size  250619_counter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3132	     96	   1600	   4828	   12dc	250619_counter.elf
+Finished building: default.size.stdout
+ 
+17:24:13 **** Incremental Build of configuration Debug for project 250620_FND_TIM_interrupt ****
+make -j16 all 
+arm-none-eabi-size  250620_FND_TIM_interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2212	     96	   1616	   3924	    f54	250620_FND_TIM_interrupt.elf
+Finished building: default.size.stdout
+ 
+17:24:13 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
+make -j16 all 
+arm-none-eabi-size  250620_watch_stopwatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3700	    100	   1636	   5436	   153c	250620_watch_stopwatch.elf
+Finished building: default.size.stdout
+ 
+17:24:13 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/STM32/250623_TimeWatch_StopWatch/Core/ap" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/Button" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/FND" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/LedBar" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:91:3: warning: implicit declaration of function 'ap_Init'; did you mean 'ap_init'? [-Wimplicit-function-declaration]
+   91 |   ap_Init();
+      |   ^~~~~~~
+      |   ap_init
+arm-none-eabi-gcc -o "250623_TimeWatch_StopWatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250623_TimeWatch_StopWatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250623_TimeWatch_StopWatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+D:/STM32/250623_TimeWatch_StopWatch/Debug/../Core/Src/main.c:91:(.text.main+0x14): undefined reference to `ap_Init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: 250623_TimeWatch_StopWatch.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:24:19 **** Incremental Build of configuration Debug for project 20250530_VGA_OV7670 ****
+make -j16 all 
+arm-none-eabi-size  20250530_VGA_OV7670.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11840	     16	   1664	  13520	   34d0	20250530_VGA_OV7670.elf
+Finished building: default.size.stdout
+ 
+17:24:19 **** Incremental Build of configuration Debug for project 250518_led ****
+make -j16 all 
+arm-none-eabi-size  250518_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6032	     12	   1572	   7616	   1dc0	250518_led.elf
+Finished building: default.size.stdout
+ 
+17:24:20 **** Incremental Build of configuration Debug for project 250618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  250618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1276	     64	   1568	   2908	    b5c	250618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+17:24:20 **** Incremental Build of configuration Debug for project 250619_button_led ****
+make -j16 all 
+arm-none-eabi-size  250619_button_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1676	     64	   1600	   3340	    d0c	250619_button_led.elf
+Finished building: default.size.stdout
+ 
+17:24:20 **** Incremental Build of configuration Debug for project 250619_counter ****
+make -j16 all 
+arm-none-eabi-size  250619_counter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3132	     96	   1600	   4828	   12dc	250619_counter.elf
+Finished building: default.size.stdout
+ 
+17:24:20 **** Incremental Build of configuration Debug for project 250620_FND_TIM_interrupt ****
+make -j16 all 
+arm-none-eabi-size  250620_FND_TIM_interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2212	     96	   1616	   3924	    f54	250620_FND_TIM_interrupt.elf
+Finished building: default.size.stdout
+ 
+17:24:20 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
+make -j16 all 
+arm-none-eabi-size  250620_watch_stopwatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3700	    100	   1636	   5436	   153c	250620_watch_stopwatch.elf
+Finished building: default.size.stdout
+ 
+17:24:20 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/STM32/250623_TimeWatch_StopWatch/Core/ap" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/Button" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/FND" -I"D:/STM32/250623_TimeWatch_StopWatch/Core/driver/LedBar" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "250623_TimeWatch_StopWatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250623_TimeWatch_StopWatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250623_TimeWatch_StopWatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250623_TimeWatch_StopWatch.elf
+ 
+arm-none-eabi-size  250623_TimeWatch_StopWatch.elf 
+arm-none-eabi-objdump -h -S 250623_TimeWatch_StopWatch.elf  > "250623_TimeWatch_StopWatch.list"
+   text	   data	    bss	    dec	    hex	filename
+  11124	    120	   1704	  12948	   3294	250623_TimeWatch_StopWatch.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250623_TimeWatch_StopWatch.list
+ 
+17:24:24 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
+make -j16 all 
+arm-none-eabi-size  250623_TimeWatch_StopWatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11124	    120	   1704	  12948	   3294	250623_TimeWatch_StopWatch.elf
 Finished building: default.size.stdout
  

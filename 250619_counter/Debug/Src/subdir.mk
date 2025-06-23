@@ -22,7 +22,7 @@ C_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/user/Desktop/stm32/STM32/250619_counter/Src/driver/SystemClock" -I"C:/Users/user/Desktop/stm32/STM32/250619_counter/Src/driver/Led_Bar" -I"C:/Users/user/Desktop/stm32/STM32/250619_counter/Src/driver/GPIO" -I"C:/Users/user/Desktop/stm32/STM32/250619_counter/Src/driver/fnd" -I"C:/Users/user/Desktop/stm32/STM32/250619_counter/Src/driver/Button" -I"C:/Users/user/Desktop/stm32/STM32/250619_counter/Src/driver" -I"C:/Users/user/Desktop/stm32/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Src
 
