@@ -313,7 +313,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 ./Src/syscalls.o
  .debug_macro   0x00000000       0xce ./Src/syscalls.o
  .debug_line    0x00000000      0x8a7 ./Src/syscalls.o
- .debug_str     0x00000000     0x99c0 ./Src/syscalls.o
+ .debug_str     0x00000000     0x99d9 ./Src/syscalls.o
  .comment       0x00000000       0x44 ./Src/syscalls.o
  .debug_frame   0x00000000      0x2ac ./Src/syscalls.o
  .ARM.attributes
@@ -378,7 +378,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6a ./Src/sysmem.o
  .debug_macro   0x00000000      0x1df ./Src/sysmem.o
  .debug_line    0x00000000      0x583 ./Src/sysmem.o
- .debug_str     0x00000000     0x775e ./Src/sysmem.o
+ .debug_str     0x00000000     0x7777 ./Src/sysmem.o
  .comment       0x00000000       0x44 ./Src/sysmem.o
  .debug_frame   0x00000000       0x34 ./Src/sysmem.o
  .ARM.attributes
@@ -1025,26 +1025,26 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x000184ed       0x8c ./Src/driver/fnd/fnd.o
  .debug_macro   0x00018579       0x9e ./Src/main.o
 
-.debug_line     0x00000000     0x237a
- .debug_line    0x00000000      0x5aa ./Src/ap/ap_main.o
- .debug_line    0x000005aa      0x4fb ./Src/driver/Button/Button.o
- .debug_line    0x00000aa5      0x4cb ./Src/driver/GPIO/GPIO.o
- .debug_line    0x00000f70      0x4a6 ./Src/driver/Led_Bar/LED_Bar.o
- .debug_line    0x00001416      0x492 ./Src/driver/SystemClock/SystemClock.o
- .debug_line    0x000018a8      0x52c ./Src/driver/fnd/fnd.o
- .debug_line    0x00001dd4      0x52b ./Src/main.o
- .debug_line    0x000022ff       0x7b ./Startup/startup_stm32f411retx.o
+.debug_line     0x00000000     0x24bf
+ .debug_line    0x00000000      0x60e ./Src/ap/ap_main.o
+ .debug_line    0x0000060e      0x52d ./Src/driver/Button/Button.o
+ .debug_line    0x00000b3b      0x4cb ./Src/driver/GPIO/GPIO.o
+ .debug_line    0x00001006      0x4bf ./Src/driver/Led_Bar/LED_Bar.o
+ .debug_line    0x000014c5      0x492 ./Src/driver/SystemClock/SystemClock.o
+ .debug_line    0x00001957      0x545 ./Src/driver/fnd/fnd.o
+ .debug_line    0x00001e9c      0x5a8 ./Src/main.o
+ .debug_line    0x00002444       0x7b ./Startup/startup_stm32f411retx.o
 
-.debug_str      0x00000000    0x48a0d
- .debug_str     0x00000000    0x48a0d ./Src/ap/ap_main.o
-                              0x4885a (size before relaxing)
- .debug_str     0x00048a0d    0x4880e ./Src/driver/Button/Button.o
- .debug_str     0x00048a0d    0x48790 ./Src/driver/GPIO/GPIO.o
- .debug_str     0x00048a0d    0x487c9 ./Src/driver/Led_Bar/LED_Bar.o
- .debug_str     0x00048a0d    0x48820 ./Src/driver/SystemClock/SystemClock.o
- .debug_str     0x00048a0d    0x48813 ./Src/driver/fnd/fnd.o
- .debug_str     0x00048a0d    0x4873e ./Src/main.o
- .debug_str     0x00048a0d       0x5d ./Startup/startup_stm32f411retx.o
+.debug_str      0x00000000    0x48a26
+ .debug_str     0x00000000    0x48a26 ./Src/ap/ap_main.o
+                              0x48873 (size before relaxing)
+ .debug_str     0x00048a26    0x48827 ./Src/driver/Button/Button.o
+ .debug_str     0x00048a26    0x487a9 ./Src/driver/GPIO/GPIO.o
+ .debug_str     0x00048a26    0x487e2 ./Src/driver/Led_Bar/LED_Bar.o
+ .debug_str     0x00048a26    0x48839 ./Src/driver/SystemClock/SystemClock.o
+ .debug_str     0x00048a26    0x4882c ./Src/driver/fnd/fnd.o
+ .debug_str     0x00048a26    0x48757 ./Src/main.o
+ .debug_str     0x00048a26       0x76 ./Startup/startup_stm32f411retx.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 ./Src/ap/ap_main.o
@@ -1067,6 +1067,6 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_frame   0x000002a0       0x2c C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
 
 .debug_line_str
-                0x00000000       0x41
+                0x00000000       0x5a
  .debug_line_str
-                0x00000000       0x41 ./Startup/startup_stm32f411retx.o
+                0x00000000       0x5a ./Startup/startup_stm32f411retx.o

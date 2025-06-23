@@ -60,8 +60,8 @@ all: main-build
 main-build: 20250530_VGA_OV7670.elf secondary-outputs
 
 # Tool invocations
-20250530_VGA_OV7670.elf 20250530_VGA_OV7670.map: $(OBJS) $(USER_OBJS) D:\STM32\20250530_VGA_OV7670\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "20250530_VGA_OV7670.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\STM32\20250530_VGA_OV7670\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20250530_VGA_OV7670.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+20250530_VGA_OV7670.elf 20250530_VGA_OV7670.map: $(OBJS) $(USER_OBJS) C:\Users\user\Desktop\stm32\STM32\20250530_VGA_OV7670\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "20250530_VGA_OV7670.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\user\Desktop\stm32\STM32\20250530_VGA_OV7670\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20250530_VGA_OV7670.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

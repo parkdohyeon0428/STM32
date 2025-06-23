@@ -1,61 +1,3 @@
-///*
-// * ap_main.c
-// *
-// *  Created on: Jun 19, 2025
-// *      Author: kccistc
-// */
-//
-//
-//#include "ap_main.h"
-//
-//Button_Handler_t hBtnLeft;
-//Button_Handler_t hBtnRight;
-//Button_Handler_t hBtnONOFF;
-//
-//int ap_main()
-//{
-//
-//	uint8_t data = 1;
-//	int led_state = 0;
-//	while(1)
-//	{
-//		if (Button_GetState(&hBtnLeft) == ACT_PUSHED)
-//		{
-//			led_state ^= 1;
-//		}
-//		switch (led_state)
-//		{
-//			case 0:
-//				data = (data << 1) | (data >> 7);
-//			break;
-//
-//			case 1:
-//				data = (data >> 1) | (data << 7);
-//			break;
-//		}
-//
-//		LEDBar_Write(data);
-//		delay(100);
-//	}
-//	return 0;
-//}
-//
-//void ap_init()
-//{
-//	SystemClock_Init();
-//	LEDBar_Init();
-//	Button_Init(&hBtnLeft, GPIOB, 5);
-//	Button_Init(&hBtnRight, GPIOB, 3);
-//	Button_Init(&hBtnONOFF, GPIOA, 10);
-//}
-
-/*
- * ap_main.c
- *
- *  Created on: Jun 19, 2025
- *      Author: kccistc
- */
-
 
 #include "ap_main.h"
 
@@ -68,7 +10,6 @@ Button_Handler_t hBtnOnoff;
 
 int ap_main()
 {
-
 
     uint8_t data = 1;
     int led_state = OFF;
@@ -103,43 +44,6 @@ int ap_main()
         	LEDBar_Write(0x00);
 			break;
 
-//            case 0 :
-//				data = 0;
-//            	if (Button_GetState(&hBtnOnoff) == ACT_RELEASED){
-//            		led_state = 1;
-//            	}
-//                break;
-//
-//            case 1 :
-//                data = 1;
-//                if (Button_GetState(&hBtnLeft) == ACT_RELEASED){
-//                	led_state = 2;
-//                }
-//                else if (Button_GetState(&hBtnRight) == ACT_RELEASED){
-//					led_state = 3;
-//				}
-//                else if (Button_GetState(&hBtnOnoff) == ACT_RELEASED){
-//                	led_state = 0;
-//                }
-//                break;
-//            case 2 :
-//            	data = (data >> 1) | (data << 7);
-//            	if (Button_GetState(&hBtnOnoff) == ACT_RELEASED){
-//					led_state = 1;
-//				}
-//            	else if (Button_GetState(&hBtnRight) == ACT_RELEASED){
-//					led_state = 3;
-//				}
-//            	break;
-//            case 3 :
-//            	data = (data << 1) | (data >> 7);
-//				if (Button_GetState(&hBtnOnoff) == ACT_RELEASED){
-//					led_state = 1;
-//				}
-//				else if (Button_GetState(&hBtnLeft) == ACT_RELEASED){
-//					led_state = 2;
-//				}
-//				break;
         }
 
         //LEDBar_Write(data);
@@ -149,7 +53,6 @@ int ap_main()
 
     return 0;
 }
-
 
 void ap_init()
 {

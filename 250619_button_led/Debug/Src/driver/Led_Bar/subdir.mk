@@ -16,7 +16,7 @@ C_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Src/driver/Led_Bar/%.o Src/driver/Led_Bar/%.su Src/driver/Led_Bar/%.cyclo: ../Src/driver/Led_Bar/%.c Src/driver/Led_Bar/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_button_led/Src/driver/GPIO" -I"D:/STM32/250619_button_led/Src/driver/Led_Bar" -I"D:/STM32/250619_button_led/Src/driver/SystemClock" -I"D:/STM32/250619_button_led/Src/ap" -I"D:/STM32/250619_button_led/Src/driver/Button" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/user/Desktop/stm32/STM32/250619_button_led/Src/driver/GPIO" -I"C:/Users/user/Desktop/stm32/STM32/250619_button_led/Src/driver/Led_Bar" -I"C:/Users/user/Desktop/stm32/STM32/250619_button_led/Src/driver/SystemClock" -I"C:/Users/user/Desktop/stm32/STM32/250619_button_led/Src/ap" -I"C:/Users/user/Desktop/stm32/STM32/250619_button_led/Src/driver/Button" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Src-2f-driver-2f-Led_Bar
 

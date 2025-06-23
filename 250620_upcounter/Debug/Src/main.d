@@ -1,26 +1,28 @@
-Src/main.o: ../Src/main.c D:/STM32/250620_upcounter/Src/ap/ap_main.h \
- D:/STM32/250620_upcounter/Src/driver/GPIO/GPIO.h ../Inc/stm32f411xe.h \
- ../Inc/core_cm4.h ../Inc/cmsis_version.h ../Inc/cmsis_compiler.h \
- ../Inc/cmsis_gcc.h ../Inc/mpu_armv7.h \
- D:/STM32/250620_upcounter/Src/driver/Led_Bar/LED_Bar.h \
- D:/STM32/250620_upcounter/Src/driver/SystemClock/SystemClock.h \
- D:/STM32/250620_upcounter/Src/driver/Button/Button.h \
- D:/STM32/250620_upcounter/Src/driver/FND/FND.h ../Inc/stm32f4xx.h \
- ../Inc/stm32f411xe.h D:/STM32/250620_upcounter/Src/driver/TIM/TIM.h \
- D:/STM32/250620_upcounter/Src/driver/Systick/Systick.h
-D:/STM32/250620_upcounter/Src/ap/ap_main.h:
-D:/STM32/250620_upcounter/Src/driver/GPIO/GPIO.h:
+Src/main.o: ../Src/main.c \
+ C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/ap/ap_main.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/GPIO/GPIO.h \
+ ../Inc/stm32f411xe.h ../Inc/core_cm4.h ../Inc/cmsis_version.h \
+ ../Inc/cmsis_compiler.h ../Inc/cmsis_gcc.h ../Inc/mpu_armv7.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/Led_Bar/LED_Bar.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/SystemClock/SystemClock.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/Button/Button.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/FND/FND.h \
+ ../Inc/stm32f4xx.h ../Inc/stm32f411xe.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/TIM/TIM.h \
+ C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/Systick/Systick.h
+C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/ap/ap_main.h:
+C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/GPIO/GPIO.h:
 ../Inc/stm32f411xe.h:
 ../Inc/core_cm4.h:
 ../Inc/cmsis_version.h:
 ../Inc/cmsis_compiler.h:
 ../Inc/cmsis_gcc.h:
 ../Inc/mpu_armv7.h:
-D:/STM32/250620_upcounter/Src/driver/Led_Bar/LED_Bar.h:
-D:/STM32/250620_upcounter/Src/driver/SystemClock/SystemClock.h:
-D:/STM32/250620_upcounter/Src/driver/Button/Button.h:
-D:/STM32/250620_upcounter/Src/driver/FND/FND.h:
+C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/Led_Bar/LED_Bar.h:
+C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/SystemClock/SystemClock.h:
+C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/Button/Button.h:
+C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/FND/FND.h:
 ../Inc/stm32f4xx.h:
 ../Inc/stm32f411xe.h:
-D:/STM32/250620_upcounter/Src/driver/TIM/TIM.h:
-D:/STM32/250620_upcounter/Src/driver/Systick/Systick.h:
+C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/TIM/TIM.h:
+C:/Users/user/Desktop/stm32/STM32/250620_upcounter/Src/driver/Systick/Systick.h:

@@ -1,6 +1,6 @@
 Src/driver/Led_Bar/LED_Bar.o: ../Src/driver/Led_Bar/LED_Bar.c \
  ../Src/driver/Led_Bar/LED_Bar.h ../Inc/stm32f411xe.h \
- D:/STM32/250619_counter/Src/driver/GPIO/GPIO.h
+ C:/Users/user/Desktop/stm32/STM32/250619_counter/Src/driver/GPIO/GPIO.h
 ../Src/driver/Led_Bar/LED_Bar.h:
 ../Inc/stm32f411xe.h:
-D:/STM32/250619_counter/Src/driver/GPIO/GPIO.h:
+C:/Users/user/Desktop/stm32/STM32/250619_counter/Src/driver/GPIO/GPIO.h:

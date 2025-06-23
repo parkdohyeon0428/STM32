@@ -32,6 +32,8 @@ FND_TypeDef fndPin[8] = {
 };
 
 static uint16_t fndDispNum = 0; //fnd에 출력되는 숫자
+// fndDispData에서 인터럽트가 자주 발생해도 0으로 시작하지않고 
+// 이전 값의 다음 자릿수로 넘어갈 수 있음
 
 void FND_Init()
 {
@@ -42,8 +44,6 @@ void FND_Init()
       GPIO_Init(fndPin[i].GPIOx, fndPin[i].pinNum, OUTPUT);
    }
 }
-
-
 
 //write fndDispNum
 void FND_WriteData(uint16_t data) {
@@ -153,10 +153,6 @@ void FND_DispDigit(uint16_t digit) {
       }
    }
 }
-
-
-
-
 
 void FND_DispData_DOT(uint32_t digit)
 {
