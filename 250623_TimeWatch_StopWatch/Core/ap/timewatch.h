@@ -12,10 +12,6 @@
 #include "FND.h"
 #include "Button.h"
 
-//extern Button_Handler_t hBtnMode;
-//extern Button_Handler_t hBtnRunStop;
-//extern Button_Handler_t hBtnClear;
-
 void TimeWatch_IncTimeCallBack();
 void TimeWatch_Excute();
 

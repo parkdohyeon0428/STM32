@@ -74,7 +74,7 @@ void FND_DispData()
 		break;
 	case DIGIT_1000:
 		FND_DispOffAll();
-		FND_DispDigit(fndDispNum/1000);
+		FND_DispDigit(fndDispNum/1000%10);
 		FND_DispOn(digitPos);
 		break;
 	}
