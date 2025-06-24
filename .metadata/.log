@@ -573,3 +573,18 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data file:/D:/STM32/
 
 !ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-23 17:20:40.786
 !MESSAGE Failed to check relative, returning possibly relative path: D:\STM32\250623_TimeWatch_StopWatch\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/Led_Bar}"
+!SESSION 2025-06-24 09:15:43.408 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-06-24 09:16:05.554
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-06-24 09:16:05.556
+!MESSAGE Log4j2 initialized with config file D:\STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-06-24 09:16:15.000
+!MESSAGE Started RMI Server, listening on port 41337
