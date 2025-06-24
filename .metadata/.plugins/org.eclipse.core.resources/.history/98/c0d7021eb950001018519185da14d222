@@ -1,0 +1,59 @@
+/*
+ * ap_main.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+
+#include "ap_main.h"
+
+typedef enum{TIME_WATCH, STOP_WATCH} watch_state_t;
+
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+
+  if(htim->Instance == TIM2){
+	  FND_DispDataCallBack();
+
+	  TimeWatch_IncTimeCallBack();
+	  StopWatch_IncTimeCallBack();
+  }
+}
+
+int ap_main()
+{
+	watch_state_t modeState = TIME_WATCH;
+	HAL_TIM_Base_Start_IT(&htim2);
+	while(1)
+	{
+
+		switch(modeState)
+		{
+		case TIME_WATCH:
+			if (Button_GetState(&hBtnMode) == ACT_RELEASED) {
+				modeState = STOP_WATCH;
+				FND_WriteDp(FND_DP_1000|FND_DP_100|FND_DP_10|FND_DP_1, FND_DP_OFF);
+			}
+			TimeWatch_Excute();
+			break;
+		case STOP_WATCH:
+			if (Button_GetState(&hBtnMode) == ACT_RELEASED) {
+				modeState = TIME_WATCH;
+				FND_WriteDp(FND_DP_1000|FND_DP_100|FND_DP_10|FND_DP_1, FND_DP_OFF);
+			}
+			StopWatch_Excute();
+			break;
+		}
+	}
+
+	return 0;
+}
+
+
+void ap_init()
+{
+	Listener_Init();
+}
+

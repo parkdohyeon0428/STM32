@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;250625_TimeWatch_StopWatch_rx/250624_TimeWatch_StopWatch_in_Proc_out_Struc.ioc&apos; to &apos;250624_TimeWatch_StopWatch_rx&apos;" description="Rename resource &apos;250624_TimeWatch_StopWatch_in_Proc_out_Struc.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="250624_TimeWatch_StopWatch_in_Proc_out_Struc.ioc" name="250624_TimeWatch_StopWatch_rx" stamp="1750750070081" updateReferences="true"/>
+</session>
