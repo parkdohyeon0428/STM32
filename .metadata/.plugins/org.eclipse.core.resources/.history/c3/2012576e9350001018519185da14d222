@@ -1,0 +1,2 @@
+../Core/ap/timewatch.c:12:6:TimeWatch_IncTimeCallBack	4	static
+../Core/ap/timewatch.c:39:6:TimeWatch_Excute	8	static
