@@ -85,8 +85,6 @@ void StopWatch_Run()
 	  controlData.id = NO_CONTROL;
       stopWatchState = STOP;
    }
-
-
 }
 
 void StopWatch_Clear()
@@ -96,6 +94,4 @@ void StopWatch_Clear()
    stopWatch.sec = 0;
    stopWatch.min = 0;
    stopWatch.hour = 0;
-
-  // FND_WriteData((stopWatch.min % 10 * 1000) + (stopWatch.sec * 10) + (stopWatch.msec/100));
 }

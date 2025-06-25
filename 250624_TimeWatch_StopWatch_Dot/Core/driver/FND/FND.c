@@ -45,9 +45,6 @@ static uint16_t fndDispNum = 0; // fnd digit data
 static uint8_t fndDispDp = 0;  // fnd dp data, xxxx1111 -> xxxx_dp1000_dp100_dp10_dp1 이렇게 보고 싶은것.
 
 
-
-
-
 void FND_WriteDp(uint8_t dpData, uint8_t dpState)
 {
    if(dpState == FND_DP_ON)
@@ -169,9 +166,9 @@ void FND_DispDigit(uint16_t digit)
          0x7D, // 6 => 01111101
          0x07, // 7 => 00000111
          0x7F, // 8 => 01111111
-         0x6F,  // 9 => 01101111
-         0x80,  // 10(dp) => 1000000
-       0x00,  // 11(off) => 0000000
+         0x6F, // 9 => 01101111
+         0x80, // 10(dp) => 1000000
+         0x00, // 11(off) => 0000000
       };
 
    for (int i = 0; i<8;i++){
