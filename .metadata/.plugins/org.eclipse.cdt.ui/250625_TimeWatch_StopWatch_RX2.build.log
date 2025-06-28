@@ -1,10 +1,20 @@
-17:13:17 **** Incremental Build of configuration Debug for project 250625_TimeWatch_StopWatch_RX2 ****
+13:02:16 **** Incremental Build of configuration Debug for project 250625_TimeWatch_StopWatch_RX2 ****
 make -j16 all 
-arm-none-eabi-size  250625_TimeWatch_StopWatch_RX2.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23248	    212	   2228	  25688	   6458	250625_TimeWatch_StopWatch_RX2.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc "../Core/driver/FND/FND.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/STM32/250625_TimeWatch_StopWatch_RX2/Core/ap" -I"D:/STM32/250625_TimeWatch_StopWatch_RX2/Core/driver" -I"D:/STM32/250625_TimeWatch_StopWatch_RX2/Core/driver/Button" -I"D:/STM32/250625_TimeWatch_StopWatch_RX2/Core/driver/FND" -I"D:/STM32/250625_TimeWatch_StopWatch_RX2/Core/driver/LedBar" -I"D:/STM32/250625_TimeWatch_StopWatch_RX2/Core/ap/src" -I"D:/STM32/250625_TimeWatch_StopWatch_RX2/Core/ap/Inc" -I"D:/STM32/250625_TimeWatch_StopWatch_RX2/Core/driver/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/driver/FND/FND.d" -MT"Core/driver/FND/FND.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/driver/FND/FND.o"
+../Core/driver/FND/FND.c:37:13: warning: 'FND_DispOff' used but never defined
+   37 | static void FND_DispOff(int fndPos);
+      |             ^~~~~~~~~~~
+arm-none-eabi-gcc -o "250625_TimeWatch_StopWatch_RX2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250625_TimeWatch_StopWatch_RX2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250625_TimeWatch_StopWatch_RX2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/driver/FND/FND.o: in function `FND_DispDataCallBack':
+D:/STM32/250625_TimeWatch_StopWatch_RX2/Debug/../Core/driver/FND/FND.c:79:(.text.FND_DispDataCallBack+0x56): undefined reference to `FND_DispOff'
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/STM32/250625_TimeWatch_StopWatch_RX2/Debug/../Core/driver/FND/FND.c:84:(.text.FND_DispDataCallBack+0x8a): undefined reference to `FND_DispOff'
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/STM32/250625_TimeWatch_StopWatch_RX2/Debug/../Core/driver/FND/FND.c:89:(.text.FND_DispDataCallBack+0xc8): undefined reference to `FND_DispOff'
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/STM32/250625_TimeWatch_StopWatch_RX2/Debug/../Core/driver/FND/FND.c:94:(.text.FND_DispDataCallBack+0x106): undefined reference to `FND_DispOff'
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: D:/STM32/250625_TimeWatch_StopWatch_RX2/Debug/../Core/driver/FND/FND.c:99:(.text.FND_DispDataCallBack+0x144): undefined reference to `FND_DispOff'
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/driver/FND/FND.o:D:/STM32/250625_TimeWatch_StopWatch_RX2/Debug/../Core/driver/FND/FND.c:109: more undefined references to `FND_DispOff' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:69: 250625_TimeWatch_StopWatch_RX2.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
 
-17:13:17 Build Finished. 0 errors, 0 warnings. (took 185ms)
+13:02:17 Build Failed. 7 errors, 1 warnings. (took 538ms)
 

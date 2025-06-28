@@ -1,0 +1,30 @@
+/*
+ * elevator.h
+ *
+ *  Created on: Jun 27, 2025
+ *      Author: kccistc
+ */
+
+#ifndef AP_INC_ELEVATOR_H_
+#define AP_INC_ELEVATOR_H_
+
+#include "stm32f4xx_hal.h"
+#include "Button.h"
+#include "Ultrasonic.h"
+#include "motor.h"
+#include "sound.h"
+#include "buzzer.h"
+
+int treadmill_GetState();
+//void treadmill_run();
+void treadmill_emergency();
+void treadmill_Start();
+
+void treadmill_Stop();
+
+void treadmill_SpeedUp();
+
+
+void treadmill_SpeedDown();
+
+#endif /* AP_INC_ELEVATOR_H_ */

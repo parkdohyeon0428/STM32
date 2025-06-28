@@ -184,3 +184,44 @@ void FND_DispDigit(uint16_t digit)
    }
 }
 
+void FND_DispOffAll()
+{
+	// GPIO_Write(GPIOx, Pin, RESET);
+	for (int i=0; i<4; i++) {
+		HAL_GPIO_WritePin(fndDigitCom[i].GPIOx, fndDigitCom[i].pinNum, RESET);
+	}
+}
+
+void FND_DispOn(int fndPos)
+{
+	// GPIO_Write(GPIOx, Pin, SET);
+	HAL_GPIO_WritePin(fndDigitCom[fndPos].GPIOx, fndDigitCom[fndPos].pinNum, SET);
+}
+
+
+void FND_DispDigit(uint16_t digit)
+{
+	const uint8_t segFont[12] = {
+		    0xC0,  // 0
+		    0xF9,  // 1
+		    0xA4,  // 2
+		    0xB0,  // 3
+		    0x99,  // 4
+		    0x92,  // 5
+		    0x82,  // 6
+		    0xF8,  // 7
+		    0x80,  // 8
+		    0x90,  // 9
+			0x7F,  // dot
+			0xFF   // all off
+	};
+
+	for (int i=0; i<8; i++) {
+		if (!(segFont[digit] & (1<<i))) {
+			HAL_GPIO_WritePin(fndPin[i].GPIOx, fndPin[i].pinNum, RESET); // 0 -> on
+		}
+		else {
+			HAL_GPIO_WritePin(fndPin[i].GPIOx, fndPin[i].pinNum, SET); // 1 -> off
+		}
+	}
+}

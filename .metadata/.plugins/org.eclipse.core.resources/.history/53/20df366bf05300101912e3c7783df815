@@ -1,0 +1,170 @@
+/*
+ * dht.c
+ *
+ *  Created on: Jun 27, 2025
+ *      Author: kccistc
+ */
+
+
+#include "DHT11.h"
+
+extern TIM_HandleTypeDef htim5;
+
+
+
+
+
+void DHT11_Start(DHT11_Handle_t *dht) {
+    dht->state = DHT11_START_SIGNAL;
+    dht->doneFlag = 0;
+
+    Set_Pin_Output(dht);
+    HAL_GPIO_WritePin(dht->GPIOx, dht->GPIO_Pin, GPIO_PIN_RESET);
+    dht->timestamp = HAL_GetTick();
+}
+
+
+static void Set_Pin_Output(DHT11_TypeDef *dht) {
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = dht->data_pinNum;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(dht->data_GPIOx, &GPIO_InitStruct);
+}
+
+static void Set_Pin_Input(DHT11_TypeDef *dht) {
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = dht->data_pinNum;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(dht->data_GPIOx, &GPIO_InitStruct);
+}
+
+void delay_us_dht(uint16_t us)
+{
+    __HAL_TIM_SET_COUNTER(&htim5, 0);
+    HAL_TIM_Base_Start(&htim5);
+    while (__HAL_TIM_GET_COUNTER(&htim5) < us);
+    HAL_TIM_Base_Stop(&htim5);
+}
+
+void DHT11_Init(DHT11_TypeDef *dht, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
+    dht->data_GPIOx = GPIOx;
+    dht->data_pinNum = GPIO_Pin;
+}
+
+void DHT11_Process(DHT11_Handle_t *dht) {
+    switch (dht->state) {
+        case DHT11_IDLE:
+            break;
+
+        case DHT11_START_SIGNAL:
+            if ((HAL_GetTick() - dht->timestamp) >= 18) { // 18ms 지나면
+                HAL_GPIO_WritePin(dht->GPIOx, dht->GPIO_Pin, GPIO_PIN_SET);
+                delay_us_dht(30);
+                Set_Pin_Input(dht);
+                dht->state = DHT11_WAIT_RESPONSE_LOW;
+                dht->timestamp = HAL_GetTick();
+            }
+            break;
+
+        case DHT11_WAIT_RESPONSE_LOW:
+            if (HAL_GPIO_ReadPin(dht->GPIOx, dht->GPIO_Pin) == GPIO_PIN_RESET) {
+                dht->state = DHT11_WAIT_RESPONSE_HIGH;
+            }
+            else if ((HAL_GetTick() - dht->timestamp) > 5) { // 타임아웃
+                dht->state = DHT11_ERROR;
+            }
+            break;
+
+        case DHT11_WAIT_RESPONSE_HIGH:
+            if (HAL_GPIO_ReadPin(dht->GPIOx, dht->GPIO_Pin) == GPIO_PIN_SET) {
+                dht->state = DHT11_READING_BITS;
+                dht->bitIndex = 0;
+                for (int i = 0; i < 5; i++) dht->data[i] = 0;
+            }
+            else if ((HAL_GetTick() - dht->timestamp) > 5) {
+                dht->state = DHT11_ERROR;
+            }
+            break;
+
+        case DHT11_READING_BITS:
+            if (dht->bitIndex < 40) {
+                if (HAL_GPIO_ReadPin(dht->GPIOx, dht->GPIO_Pin) == GPIO_PIN_SET) {
+                    delay_us_dht(40);
+                    if (HAL_GPIO_ReadPin(dht->GPIOx, dht->GPIO_Pin) == GPIO_PIN_SET)
+                        dht->data[dht->bitIndex / 8] = (dht->data[dht->bitIndex / 8] << 1) | 1;
+                    else
+                        dht->data[dht->bitIndex / 8] = (dht->data[dht->bitIndex / 8] << 1);
+
+                    dht->bitIndex++;
+                    while (HAL_GPIO_ReadPin(dht->GPIOx, dht->GPIO_Pin) == GPIO_PIN_SET);
+                }
+            }
+            else {
+                if (dht->data[4] == (dht->data[0] + dht->data[1] + dht->data[2] + dht->data[3])) {
+                    dht->humi = dht->data[0];
+                    dht->temp = dht->data[2];
+                    dht->doneFlag = 1;
+                    dht->state = DHT11_DONE;
+                }
+                else {
+                    dht->state = DHT11_ERROR;
+                }
+            }
+            break;
+
+        case DHT11_DONE:
+            // 완료 상태, 필요 시 다음 동작 준비
+            break;
+
+        case DHT11_ERROR:
+            // 오류 처리
+            break;
+    }
+}
+
+
+//uint8_t DHT11_Read(DHT11_TypeDef *dht, uint8_t *temp, uint8_t *humi) {
+//    uint8_t data[5] = {0};
+//
+//    // Start signal
+//    Set_Pin_Output(dht);
+//    HAL_GPIO_WritePin(dht->data_GPIOx, dht->data_pinNum, GPIO_PIN_RESET);
+//    delay_us_dht(18000);
+//    HAL_GPIO_WritePin(dht->data_GPIOx, dht->data_pinNum, GPIO_PIN_SET);
+//    delay_us_dht(30);
+//
+//    Set_Pin_Input(dht);
+//
+//    // 응답 신호 대기
+//    uint32_t timeout = 0;
+//    while (HAL_GPIO_ReadPin(dht->data_GPIOx, dht->data_pinNum) == GPIO_PIN_SET)
+//        if (++timeout > 10000) return 1;
+//
+//    while (HAL_GPIO_ReadPin(dht->data_GPIOx, dht->data_pinNum) == GPIO_PIN_RESET);
+//    while (HAL_GPIO_ReadPin(dht->data_GPIOx, dht->data_pinNum) == GPIO_PIN_SET);
+//
+//    // 40bit 데이터 수신
+//    for (int i = 0; i < 40; i++) {
+//        while (HAL_GPIO_ReadPin(dht->data_GPIOx, dht->data_pinNum) == GPIO_PIN_RESET);
+//        delay_us_dht(40);
+//
+//        if (HAL_GPIO_ReadPin(dht->data_GPIOx, dht->data_pinNum) == GPIO_PIN_SET)
+//            data[i/8] = (data[i/8] << 1) | 1;
+//        else
+//            data[i/8] = (data[i/8] << 1);
+//
+//        while (HAL_GPIO_ReadPin(dht->data_GPIOx, dht->data_pinNum) == GPIO_PIN_SET);
+//    }
+//
+//    // 체크섬 검증
+//    if (data[4] == (data[0] + data[1] + data[2] + data[3])) {
+//        *humi = data[0];
+//        *temp = data[2];
+//        return 0;
+//    }
+//
+//    return 2;
+//}

@@ -1,10 +1,10 @@
-17:04:32 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
+20:48:25 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
 make -j16 all 
 arm-none-eabi-size  250623_TimeWatch_StopWatch.elf 
    text	   data	    bss	    dec	    hex	filename
-  11124	    120	   1704	  12948	   3294	250623_TimeWatch_StopWatch.elf
+  11144	    120	   1704	  12968	   32a8	250623_TimeWatch_StopWatch.elf
 Finished building: default.size.stdout
  
 
-17:04:32 Build Finished. 0 errors, 0 warnings. (took 130ms)
+20:48:25 Build Finished. 0 errors, 0 warnings. (took 181ms)
 

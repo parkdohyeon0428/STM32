@@ -1,0 +1,124 @@
+/*
+ * elevator.c
+ *
+ *  Created on: Jun 27, 2025
+ *      Author: kccistc
+ */
+#include "treadmill.h"
+
+
+#define MAX_SPEED 100
+#define MIN_SPEED 0
+
+#define START   1
+#define STOP   2
+#define UP      3
+#define DOWN    4
+
+UltraSonic_TypeDef sensor;
+
+typedef enum {
+    IDLE,
+    RUNNING,
+   NO_RUNNING
+} TreadmillState_t;
+
+static TreadmillState_t treadmillState = IDLE;
+
+static int speed = 15;
+
+int treadmill_GetState()
+{
+   if (Button_GetState(&hBtnSTOP) == ACT_PUSHED) {
+      return STOP;
+   }
+   else if (Button_GetState(&hBtnSTART) == ACT_PUSHED) {
+      return START;
+   }
+   else if (Button_GetState(&hBtnUP) == ACT_PUSHED) {
+      return UP;
+   }
+   else if (Button_GetState(&hBtnDOWN) == ACT_PUSHED) {
+      return DOWN;
+   }
+   return 0;
+}
+
+void treadmill_run()
+{
+    switch (treadmillState)
+    {
+        case IDLE:
+            if (Button_GetState(&hBtnSTART) == ACT_PUSHED) {
+                treadmillState = RUNNING;
+            }
+            break;
+
+        case RUNNING:
+           Motor_SetFreq(10, speed);
+           Motor_Start();
+
+            if (Button_GetState(&hBtnSTOP) == ACT_PUSHED) {
+                treadmillState = NO_RUNNING;
+
+            }
+            else if (Button_GetState(&hBtnUP) == ACT_PUSHED) {
+                speed += 2;
+                if (speed > MAX_SPEED) speed = MAX_SPEED;
+            }
+            else if (Button_GetState(&hBtnDOWN) == ACT_PUSHED) {
+                speed -= 2;
+                if (speed < MIN_SPEED) speed = MIN_SPEED;
+            }
+            break;
+
+        case NO_RUNNING:
+            Motor_Stop();
+           treadmillState = IDLE;
+    }
+}
+
+void treadmill_emergency()
+{
+    int dist = UltraSonic(&sensor);
+
+    if ((dist <= 5) && (dist >= 1) && (treadmillState == RUNNING)) {
+       Sound_PowerOn();
+    } else {
+       Sound_PowerOff();
+    }
+}
+
+
+//void treadmill_Start()
+//{
+//    Motor_Start();
+//}
+//
+//void treadmill_Stop()
+//{
+//    Motor_Stop();
+//}
+//
+//void treadmill_SpeedUp()
+//{
+//    speed += 5;
+//    if (speed > MAX_SPEED) speed = MAX_SPEED;
+//    Motor_SetFreq(10, speed);
+//}
+//
+//void treadmill_SpeedDown()
+//{
+//    speed -= 5;
+//    if (speed < MIN_SPEED) speed = MIN_SPEED;
+//    Motor_SetFreq(10, speed);
+//}
+//
+//void treadmill_emergency()
+//{
+//    if (UltraSonic(&sensor) <= 5) {
+//        Buzzer_Start();
+//        Sound_PowerOn();
+//        Motor_Stop();
+//    }
+//}

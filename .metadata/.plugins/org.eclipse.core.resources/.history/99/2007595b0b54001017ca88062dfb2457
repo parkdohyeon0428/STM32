@@ -1,0 +1,27 @@
+/*
+ * Presenter.h
+ *
+ *  Created on: Jun 24, 2025
+ *      Author: rhoblack
+ */
+
+#ifndef AP_PRESENTER_H_
+#define AP_PRESENTER_H_
+
+#include "Controller.h"
+#include "FND.h"
+#include "lcd.h"
+#include "LedBar.h"
+#include "UltraSonic.h"
+#include "DC_Motor.h"
+#include "DHT11.h"
+
+
+
+void Presenter_Init();
+void Presenter_Excute(treadmill_t state);
+void Presenter_DispLcdTreadmill(treadmill_t state);
+void display_speed(int speed, treadmill_t state);
+void Presenter_DispFndRunTime(treadmill_t state);
+
+#endif /* AP_PRESENTER_H_ */

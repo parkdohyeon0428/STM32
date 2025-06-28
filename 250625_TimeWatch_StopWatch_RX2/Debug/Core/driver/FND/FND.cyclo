@@ -2,7 +2,6 @@
 ../Core/driver/FND/FND.c:60:6:FND_WriteData	1
 ../Core/driver/FND/FND.c:65:10:FND_ReadData	1
 ../Core/driver/FND/FND.c:70:6:FND_DispDataCallBack	13
-../Core/driver/FND/FND.c:143:6:FND_DispOff	1
-../Core/driver/FND/FND.c:148:6:FND_DispOn	1
-../Core/driver/FND/FND.c:153:6:FND_DispOffAll	2
-../Core/driver/FND/FND.c:160:6:FND_DispDigit	3
+../Core/driver/FND/FND.c:187:6:FND_DispOffAll	2
+../Core/driver/FND/FND.c:195:6:FND_DispOn	1
+../Core/driver/FND/FND.c:202:6:FND_DispDigit	3
