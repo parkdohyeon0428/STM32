@@ -101,7 +101,6 @@ void StopWatch_Run()
    else {
       FND_WriteDp(FND_DP_1000, FND_DP_OFF);
    }
-
 }
 
 void StopWatch_Clear()
