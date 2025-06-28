@@ -14,6 +14,6 @@
 
 void Presenter_Init();
 void Presenter_Excute();
-void Presenter_OutData(watch_t watchData);
+//void Presenter_OutData(watch_t watchData);
 
 #endif /* AP_PRESENTER_H_ */

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="hasShownOverlayPopupBefore" value="true"/>
-	<item key="replaceBarOpen" value="false"/>
+	<item key="replaceBarOpen" value="true"/>
 	<list key="searchhistory">
+		<item value="htim4"/>
+		<item value="-&gt;"/>
+		<item value="TIM4"/>
 		<item value="Callback"/>
 		<item value="Typedef"/>
 		<item value="Typedef TIM"/>
@@ -15,7 +18,9 @@
 		<item value="AHB1ENR"/>
 		<item value="BK"/>
 		<item value="core"/>
-		<item value="strcut"/>
-		<item value="GPIO"/>
+	</list>
+	<list key="replacehistory">
+		<item value="htim5"/>
+		<item value="."/>
 	</list>
 </section>

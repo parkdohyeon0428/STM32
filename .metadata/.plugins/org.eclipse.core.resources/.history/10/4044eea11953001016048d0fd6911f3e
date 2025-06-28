@@ -1,0 +1,107 @@
+/*
+
+ *
+ *  Created on: Jun 27, 2025
+ *      Author: kccistc
+ */
+#include "treadmill.h"
+
+Button_Handler_t hBtnUP;
+Button_Handler_t hBtnDOWN;
+Button_Handler_t hBtnSTOP;
+Button_Handler_t hBtnSTART;
+
+UltraSonic_TypeDef sensor;
+
+#define MAX_SPEED 100
+#define MIN_SPEED 0
+
+//#define START   1
+//#define STOP   2
+//#define UP      3
+//#define DOWN    4
+
+static int speed = 0;
+
+//int treadmill_GetState()
+//{
+//   if (Button_GetState(&hBtnSTOP) == ACT_RELEASED) {
+//      return STOP;
+//   }
+//   else if (Button_GetState(&hBtnSTART) == ACT_RELEASED) {
+//      return START;
+//   }
+//   else if (Button_GetState(&hBtnUP) == ACT_RELEASED) {
+//      return UP;
+//   }
+//   else if (Button_GetState(&hBtnDOWN) == ACT_RELEASED) {
+//      return DOWN;
+//   }
+//   return 0;
+//}
+//
+//void treadmill_Excute()
+//{
+//    int btnState = treadmill_GetState();
+//
+//    if (btnState == STOP) {
+//        DC_Motor_Stop();
+//    }
+//    else if (btnState == START) {
+//        DC_Motor_Start();
+//    }
+//    else if (btnState == UP) {
+//        speed += 5;
+//        if (speed > MAX_SPEED) speed = MAX_SPEED;
+//    }
+//    else if (btnState == DOWN) {
+//        speed -= 5;
+//        if (speed < MIN_SPEED) speed = MIN_SPEED;
+//    }
+//
+//    // 주파수 고정, 듀티비로 속도 제어
+//    DC_Motor_SetFreq(10, speed);
+//}
+//
+//void treadmill_emergency()
+//{
+//   if (UltraSonic_GetDistance(&sensor) <= 5) {
+//      Buzzer_Start();
+//      Sound_PowerOn();
+//      DC_Motor_Stop();
+//   }
+//}
+
+
+void treadmill_Start()
+{
+    Motor_Start();
+}
+
+void treadmill_Stop()
+{
+    Motor_Stop();
+}
+
+void treadmill_SpeedUp()
+{
+    speed += 5;
+    if (speed > MAX_SPEED) speed = MAX_SPEED;
+    Motor_SetFreq(10, speed);
+}
+
+void treadmill_SpeedDown()
+{
+    speed -= 5;
+    if (speed < MIN_SPEED) speed = MIN_SPEED;
+    Motor_SetFreq(10, speed);
+}
+
+void treadmill_emergency()
+{
+    //if (UltraSonic_GetDistance(&sensor) <= 5) {
+        Buzzer_Start();
+        Sound_PowerOn();
+        Motor_Stop();
+   // }
+}

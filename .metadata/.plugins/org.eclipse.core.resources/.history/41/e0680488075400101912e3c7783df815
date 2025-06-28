@@ -1,0 +1,66 @@
+/*
+ * Controller.c
+ *
+ *  Created on: Jun 24, 2025
+ *      Author: rhoblack
+ */
+#include "Controller.h"
+
+
+
+static TreadmillState_t treadmillState = T_NO_RUNNING;
+static TreadmillInputId_t inputData = NO_INPUT;
+int speed = 3;
+extern UltraSonic_TypeDef sensor;
+
+void Treadmill_Controller_SetInput(TreadmillInputId_t input)
+{
+    // 입력 값을 전역 inputData 에 저장
+    inputData = input;
+}
+
+void Treadmill_Controller_Excute()
+{
+    switch (treadmillState)
+    {
+        case T_IDLE:
+            if (inputData == TREADMILL_START) {
+                treadmillState = T_RUNNING;
+                DC_Motor_SetFreq(10, speed);
+                DC_Motor_Start();
+            }
+            break;
+
+        case T_RUNNING:
+            if (inputData == TREADMILL_STOP) {
+                treadmillState = T_NO_RUNNING;
+                DC_Motor_Stop();
+            }
+            else if (inputData == TREADMILL_UP) {
+                speed += 2;
+                if (speed > 100) speed = 100;
+                //DC_Motor_SetFreq(1000, speed);
+            }
+            else if (inputData == TREADMILL_DOWN) {
+                speed -= 2;
+                if (speed < 0) speed = 0;
+                //DC_Motor_SetFreq(1000, speed);
+            }
+            break;
+        case T_NO_RUNNING:
+        	DC_Motor_Stop();
+        	treadmillState = T_IDLE;
+        	break;
+    }
+
+    int dist = UltraSonic_GetDistance(&sensor);
+
+	if ((dist <= 5) && (dist >= 1) && (state == T_RUNNING)) {
+		Sound_PowerOn();
+	} else {
+		Sound_PowerOff();
+	}
+
+    inputData = NO_INPUT;
+    Presenter_DispLcdTreadmill(treadmillState);
+}

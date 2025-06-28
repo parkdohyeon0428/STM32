@@ -1,0 +1,31 @@
+/*
+ * Controller.h
+ *
+ *  Created on: Jun 24, 2025
+ *      Author: rhoblack
+ */
+
+#ifndef AP_CONTROLLER_H_
+#define AP_CONTROLLER_H_
+
+#include "DC_Motor.h"
+#include "sound.h"
+#include "Presenter.h"
+#include "Model.h"
+
+extern int speed;
+
+typedef enum {
+    NO_INPUT,
+    TREADMILL_START,
+    TREADMILL_STOP,
+    TREADMILL_UP,
+    TREADMILL_DOWN,
+	TEMP
+} TreadmillInputId_t;
+
+
+void Treadmill_Controller_SetInput(TreadmillInputId_t  input);
+void Treadmill_Controller_Excute(void);
+
+#endif /* AP_CONTROLLER_H_ */

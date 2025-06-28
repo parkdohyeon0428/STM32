@@ -63,7 +63,7 @@ void StopWatch_Excute()
       StopWatch_Clear();
       break;
    }
-   Presenter_OutData(stopWatch);
+   //Presenter_OutData(stopWatch);
 }
 
 void StopWatch_Stop()

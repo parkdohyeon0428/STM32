@@ -1,0 +1,5 @@
+../Core/ap/src/sound.c:9:6:Sound_Init	1
+../Core/ap/src/sound.c:14:6:Sound_PowerOn	1
+../Core/ap/src/sound.c:21:6:Sound_PowerOff	1
+../Core/ap/src/sound.c:26:6:Sound_ChangeMode	1
+../Core/ap/src/sound.c:31:6:Sound_Alarm	1

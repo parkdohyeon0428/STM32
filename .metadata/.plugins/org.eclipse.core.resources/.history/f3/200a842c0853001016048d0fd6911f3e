@@ -1,0 +1,23 @@
+/*
+ * Model_Watch.h
+ *
+ *  Created on: Jun 24, 2025
+ *      Author: rhoblack
+ */
+
+#ifndef AP_INC_MODEL_FLOOR_H_
+#define AP_INC_MODEL_FLOOR_H_
+
+#include "stm32f4xx_hal.h"
+
+enum {};
+
+typedef struct {
+	uint8_t curstate;
+	uint8_t targetstate;
+	uint16_t motorFreq;
+	uint16_t buzzerFreq;
+	uint8_t isStop;
+}FloorData_TypeDef;
+
+#endif /* AP_INC_MODEL_FLOOR_H_ */

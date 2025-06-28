@@ -10,7 +10,7 @@
 typedef enum{S_TIME_WATCH, S_STOP_WATCH} watchModeState_t;
 
 inputData_TypeDef controlData = {0};
-static watchModeState_t modeState = TIME_WATCH;
+static watchModeState_t modeState = S_TIME_WATCH;
 void Controller_Mode();
 
 
