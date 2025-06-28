@@ -65,7 +65,6 @@ void Listener_CheckButton()
 
 void Listener_CheckUart()
 {
-
 	if (isQueEmpty(&uartRxQue)) {
 		return;
 	}
