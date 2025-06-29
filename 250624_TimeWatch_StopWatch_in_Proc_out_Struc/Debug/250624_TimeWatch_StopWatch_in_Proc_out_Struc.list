@@ -37,11 +37,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  00016f95  00000000  00000000  0001836c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0001222d  00000000  00000000  0002f301  2**0
+ 17 .debug_line   0001222b  00000000  00000000  0002f301  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0008e8be  00000000  00000000  0004152e  2**0
+ 18 .debug_str    0008e8be  00000000  00000000  0004152c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000cfdec  2**0
+ 19 .comment      00000043  00000000  00000000  000cfdea  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00003b74  00000000  00000000  000cfe30  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -2519,8 +2519,6 @@ void StopWatch_Run()
  80010e0:	2200      	movs	r2, #0
  80010e2:	701a      	strb	r2, [r3, #0]
    }
-
-
 }
  80010e4:	bf00      	nop
  80010e6:	46bd      	mov	sp, r7
@@ -2556,8 +2554,6 @@ void StopWatch_Clear()
  8001114:	4b04      	ldr	r3, [pc, #16]	@ (8001128 <StopWatch_Clear+0x30>)
  8001116:	2200      	movs	r2, #0
  8001118:	705a      	strb	r2, [r3, #1]
-
-  // FND_WriteData((stopWatch.min % 10 * 1000) + (stopWatch.sec * 10) + (stopWatch.msec/100));
 }
  800111a:	bf00      	nop
  800111c:	46bd      	mov	sp, r7

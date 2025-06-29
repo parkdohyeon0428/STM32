@@ -1,0 +1,5 @@
+../Core/ap/src/Presenter.c:15:6:Presenter_Init	8	static
+../Core/ap/src/Presenter.c:20:6:Presenter_Excute	8	static
+../Core/ap/src/Presenter.c:28:6:Presenter_DispLcdTreadmill	72	static
+../Core/ap/src/Presenter.c:68:6:display_speed	24	static
+../Core/ap/src/Presenter.c:105:6:Presenter_DispFndRunTime	56	static

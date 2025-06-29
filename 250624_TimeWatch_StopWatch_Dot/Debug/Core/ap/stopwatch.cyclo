@@ -3,4 +3,4 @@
 ../Core/ap/stopwatch.c:58:6:StopWatch_Excute	5
 ../Core/ap/stopwatch.c:74:6:StopWatch_Stop	3
 ../Core/ap/stopwatch.c:85:6:StopWatch_Run	4
-../Core/ap/stopwatch.c:107:6:StopWatch_Clear	1
+../Core/ap/stopwatch.c:106:6:StopWatch_Clear	1

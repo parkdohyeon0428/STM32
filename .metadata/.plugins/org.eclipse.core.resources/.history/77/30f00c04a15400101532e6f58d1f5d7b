@@ -1,0 +1,88 @@
+/*
+ * elevator.c
+ *
+ *  Created on: Jun 27, 2025
+ *      Author: kccistc
+ */
+#include "controller.h"
+#include "usart.h"
+
+extern DHT11_TypeDef hdht11;
+extern TreadmillInputId_t inputdata;
+extern UltraSonic_TypeDef sensor;
+
+TreadmillState_t state = NO_RUNNING;
+
+static void controller_dht();
+static void controller_treadmill();
+static void controller_sound();
+
+
+void controller_excute()
+{
+	controller_dht();
+	controller_treadmill();
+	controller_sound();
+}
+
+
+void controller_dht()
+{
+	if (inputdata == TEMP)
+	{
+		uint8_t temp = 0, humi = 0;
+		if (DHT11_Read(&hdht11, &temp, &humi) == 0)
+		{
+			uint16_t fndData = (temp * 100) + humi;
+			FND_WriteData(fndData);
+		}
+	}
+}
+
+
+void controller_treadmill()
+{
+
+    switch (state)
+    {
+    	case IDLE:
+			if (inputdata == TREADMILL_START) {
+				state = RUNNING;
+			}
+			break;
+
+		case RUNNING:
+			treadmill_start();
+			if (inputdata == TREADMILL_STOP) {
+				state = NO_RUNNING;
+			}
+			else if (inputdata == TREADMILL_UP) {
+				inputdata = NO_INPUT;
+				treadmill_up();
+			}
+			else if (inputdata == TREADMILL_DOWN) {
+				inputdata = NO_INPUT;
+				treadmill_down();
+			}
+			break;
+
+        case NO_RUNNING:
+        	treadmill_stop();
+        	state = IDLE;
+    }
+}
+
+void controller_sound()
+{
+    int dist = UltraSonic_GetDistance(&sensor);
+
+    if ((dist <= 5) && (dist >= 1) && (state == RUNNING))
+    {
+    	Sound_PowerOn();
+    } else
+    {
+    	Sound_PowerOff();
+    }
+}
+
+

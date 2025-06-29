@@ -1,0 +1,70 @@
+/*
+ * elevator.c
+ *
+ *  Created on: Jun 27, 2025
+ *      Author: kccistc
+ */
+#include <controller.h>
+#include "usart.h"
+
+extern DHT11_TypeDef hdht11;
+
+extern TreadmillInputId_t inputdata;
+
+TreadmillState_t state = NO_RUNNING;
+
+
+void treadmill_run()
+{
+
+	if (inputdata == TEMP)
+	{
+		uint8_t temp = 0, humi = 0;
+		if (DHT11_Read(&hdht11, &temp, &humi) == 0)
+		{
+			uint16_t fndData = (temp * 100) + humi;
+			FND_WriteData(fndData);
+		}
+	}
+    switch (state)
+    {
+    	case IDLE:
+			if (inputdata == TREADMILL_START) {
+				state = RUNNING;
+			}
+			break;
+
+		case RUNNING:
+			treadmill_start();
+
+			if (inputdata == TREADMILL_STOP) {
+				state = NO_RUNNING;
+			}
+			else if (inputdata == TREADMILL_UP) {
+				inputdata = NO_INPUT;
+				treadmill_up();
+			}
+			else if (inputdata == TREADMILL_DOWN) {
+				inputdata = NO_INPUT;
+				treadmill_down();
+			}
+			break;
+
+        case NO_RUNNING:
+        	treadmill_stop();
+        	state = IDLE;
+    }
+}
+
+void treadmill_emergency()
+{
+    int dist = UltraSonic_GetDistance(&sensor);
+
+    if ((dist <= 5) && (dist >= 1) && (state == RUNNING)) {
+    	Sound_PowerOn();
+    } else {
+    	Sound_PowerOff();
+    }
+}
+
+

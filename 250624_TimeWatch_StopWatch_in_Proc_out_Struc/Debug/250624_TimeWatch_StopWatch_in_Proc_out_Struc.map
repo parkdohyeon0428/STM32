@@ -4908,7 +4908,7 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x00016bf8      0x1ce ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
  .debug_macro   0x00016dc6      0x1cf ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
 
-.debug_line     0x00000000    0x1222d
+.debug_line     0x00000000    0x1222b
  .debug_line    0x00000000      0x786 ./Core/Src/gpio.o
  .debug_line    0x00000786      0x92c ./Core/Src/main.o
  .debug_line    0x000010b2      0x746 ./Core/Src/stm32f4xx_hal_msp.o
@@ -4919,20 +4919,20 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_line    0x00003509      0x7b4 ./Core/Src/usart.o
  .debug_line    0x00003cbd       0x7a ./Core/Startup/startup_stm32f411retx.o
  .debug_line    0x00003d37      0x125 ./Core/ap/src/Controller.o
- .debug_line    0x00003e5c      0x85a ./Core/ap/src/Listener.o
- .debug_line    0x000046b6      0xaa8 ./Core/ap/src/Presenter.o
- .debug_line    0x0000515e      0x8d3 ./Core/ap/src/ap_main.o
- .debug_line    0x00005a31      0x8f9 ./Core/ap/src/stopwatch.o
- .debug_line    0x0000632a      0x862 ./Core/ap/src/timewatch.o
- .debug_line    0x00006b8c      0x797 ./Core/driver/Button/Button.o
- .debug_line    0x00007323      0xa05 ./Core/driver/FND/FND.o
- .debug_line    0x00007d28      0xa38 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x00008760      0xd08 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x00009468      0xb54 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_line    0x00009fbc      0xe47 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_line    0x0000ae03     0x3577 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
- .debug_line    0x0000e37a     0x1933 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
- .debug_line    0x0000fcad     0x2580 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+ .debug_line    0x00003e5c      0x858 ./Core/ap/src/Listener.o
+ .debug_line    0x000046b4      0xaa8 ./Core/ap/src/Presenter.o
+ .debug_line    0x0000515c      0x8d3 ./Core/ap/src/ap_main.o
+ .debug_line    0x00005a2f      0x8f9 ./Core/ap/src/stopwatch.o
+ .debug_line    0x00006328      0x862 ./Core/ap/src/timewatch.o
+ .debug_line    0x00006b8a      0x797 ./Core/driver/Button/Button.o
+ .debug_line    0x00007321      0xa05 ./Core/driver/FND/FND.o
+ .debug_line    0x00007d26      0xa38 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x0000875e      0xd08 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x00009466      0xb54 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_line    0x00009fba      0xe47 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_line    0x0000ae01     0x3577 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_line    0x0000e378     0x1933 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_line    0x0000fcab     0x2580 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
 
 .debug_str      0x00000000    0x8e8be
  .debug_str     0x00000000    0x8e8be ./Core/Src/gpio.o

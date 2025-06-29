@@ -14,8 +14,9 @@
 
 static uint8_t rcvData = 0;
 static Que_TypeDef uartRxQue;
-UltraSonic_TypeDef sensor;
 inputData_TypeDef inputData;
+
+
 
 void Listener_Init()
 {

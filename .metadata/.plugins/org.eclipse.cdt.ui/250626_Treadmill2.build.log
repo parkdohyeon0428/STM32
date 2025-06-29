@@ -1,10 +1,15 @@
-20:48:26 **** Incremental Build of configuration Debug for project 250626_Treadmill2 ****
+13:30:16 **** Incremental Build of configuration Debug for project 250626_Treadmill2 ****
 make -j16 all 
-arm-none-eabi-size  250626_Treadmill2.elf 
-   text	   data	    bss	    dec	    hex	filename
-  25732	    260	   2484	  28476	   6f3c	250626_Treadmill2.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc -o "250626_Treadmill2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250626_Treadmill2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250626_Treadmill2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/ap/src/Listener.o: in function `Listener_Init':
+D:/STM32/250626_Treadmill2/Debug/../Core/ap/src/Listener.c:31:(.text.Listener_Init+0x78): undefined reference to `sensor'
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/ap/src/ap_main.o: in function `ap_main':
+D:/STM32/250626_Treadmill2/Debug/../Core/ap/src/ap_main.c:29:(.text.ap_main+0x58): undefined reference to `sensor'
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/ap/src/treadmill.o: in function `treadmill_emergency':
+D:/STM32/250626_Treadmill2/Debug/../Core/ap/src/treadmill.c:81:(.text.treadmill_emergency+0x38): undefined reference to `sensor'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:72: 250626_Treadmill2.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
 
-20:48:26 Build Finished. 0 errors, 0 warnings. (took 181ms)
+13:30:16 Build Failed. 4 errors, 0 warnings. (took 283ms)
 

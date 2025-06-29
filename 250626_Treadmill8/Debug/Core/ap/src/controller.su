@@ -1,0 +1,4 @@
+../Core/ap/src/controller.c:22:6:controller_excute	8	static
+../Core/ap/src/controller.c:30:6:controller_dht	16	static
+../Core/ap/src/controller.c:44:6:controller_treadmill	8	static
+../Core/ap/src/controller.c:76:6:controller_sound	16	static
