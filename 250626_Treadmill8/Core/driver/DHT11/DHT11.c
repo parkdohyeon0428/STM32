@@ -43,7 +43,6 @@ void DHT11_Init(DHT11_TypeDef *dht, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
 uint8_t DHT11_Read(DHT11_TypeDef *dht, uint8_t *temp, uint8_t *humi) {
     uint8_t data[5] = {0};
 
-    // Start signal
     Set_Pin_Output(dht);
     HAL_GPIO_WritePin(dht->data_GPIOx, dht->data_pinNum, GPIO_PIN_RESET);
     delay_us_dht(18000);
@@ -52,7 +51,6 @@ uint8_t DHT11_Read(DHT11_TypeDef *dht, uint8_t *temp, uint8_t *humi) {
 
     Set_Pin_Input(dht);
 
-    // 응답 신호 대기
     uint32_t timeout = 0;
     while (HAL_GPIO_ReadPin(dht->data_GPIOx, dht->data_pinNum) == GPIO_PIN_SET)
         if (++timeout > 10000) return 1;
@@ -60,7 +58,6 @@ uint8_t DHT11_Read(DHT11_TypeDef *dht, uint8_t *temp, uint8_t *humi) {
     while (HAL_GPIO_ReadPin(dht->data_GPIOx, dht->data_pinNum) == GPIO_PIN_RESET);
     while (HAL_GPIO_ReadPin(dht->data_GPIOx, dht->data_pinNum) == GPIO_PIN_SET);
 
-    // 40bit 데이터 수신
     for (int i = 0; i < 40; i++) {
         while (HAL_GPIO_ReadPin(dht->data_GPIOx, dht->data_pinNum) == GPIO_PIN_RESET);
         delay_us_dht(40);
@@ -73,12 +70,10 @@ uint8_t DHT11_Read(DHT11_TypeDef *dht, uint8_t *temp, uint8_t *humi) {
         while (HAL_GPIO_ReadPin(dht->data_GPIOx, dht->data_pinNum) == GPIO_PIN_SET);
     }
 
-    // 체크섬 검증
     if (data[4] == (data[0] + data[1] + data[2] + data[3])) {
         *humi = data[0];
         *temp = data[2];
         return 0;
     }
-
     return 2;
 }
