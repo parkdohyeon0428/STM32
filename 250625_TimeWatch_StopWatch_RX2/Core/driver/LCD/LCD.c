@@ -13,13 +13,13 @@
 #define LCD_E  2
 #define LCD_BL 3
 
-#define LCD_4BIT_FUNC_SET  0x28
-#define LCD_DISP_OFF 	   0x08
-#define LCD_DISP_ON 	   0x0C
-#define LCD_DISP_CLEAR	   0x01
-#define LCD_ENTRY_MODE_SET 0x06
+#define LCD_4BIT_FUNC_SET  0x28  // 4비트 모드,2줄,5x8도트
+#define LCD_DISP_OFF 	   0x08  // 화면 끄기
+#define LCD_DISP_ON 	   0x0C  // 화면 켜기, 커서 안 보이게
+#define LCD_DISP_CLEAR	   0x01  // 화면 지우기
+#define LCD_ENTRY_MODE_SET 0x06  // 커서 오른쪽으로 이동
 
-#define LCD_DEV_ADDR 	   0x27
+#define LCD_DEV_ADDR 	   0x27  // slave addr
 
 static void LCD_cmdMode();
 static void LCD_charMode();
@@ -103,7 +103,8 @@ void LCD_E_Low()
 void LCD_sendNibbleData(uint8_t data)
 {
 	LCD_E_High();
-	lcdData = (data & 0xf0) | (lcdData & 0x0f); // 상위 data 하위 lcdData
+	lcdData = (data & 0xf0) | (lcdData & 0x0f);
+	//         상위 data        하위 lcdData
 	LCD_sendI2C(lcdData);
 	LCD_E_Low();
 }
@@ -112,8 +113,6 @@ void LCD_sendData(uint8_t data)
 {
 	// high 4bit
 	LCD_sendNibbleData(data);
-
-
 	data = data << 4;
 	// low 4bit
 	LCD_sendNibbleData(data);
