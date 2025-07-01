@@ -1,4 +1,4 @@
 ../Core/ap/src/controller.c:22:6:controller_excute	1
 ../Core/ap/src/controller.c:30:6:controller_dht	3
-../Core/ap/src/controller.c:44:6:controller_treadmill	9
-../Core/ap/src/controller.c:76:6:controller_sound	4
+../Core/ap/src/controller.c:43:6:controller_treadmill	9
+../Core/ap/src/controller.c:75:6:controller_sound	4

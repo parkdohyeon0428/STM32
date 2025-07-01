@@ -1,4 +1,4 @@
-13:08:35 **** Incremental Build of configuration Debug for project 250626_Treadmill ****
+15:54:37 **** Incremental Build of configuration Debug for project 250626_Treadmill ****
 make -j16 all 
 arm-none-eabi-size  250626_Treadmill.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  250626_Treadmill.elf
 Finished building: default.size.stdout
  
 
-13:08:36 Build Finished. 0 errors, 0 warnings. (took 386ms)
+15:54:37 Build Finished. 0 errors, 0 warnings. (took 437ms)
 

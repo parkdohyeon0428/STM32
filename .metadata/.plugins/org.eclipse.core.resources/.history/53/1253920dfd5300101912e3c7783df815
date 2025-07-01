@@ -1,5 +1,0 @@
-../Core/driver/DHT11/DHT11.c:13:13:Set_Pin_Output	40	static
-../Core/driver/DHT11/DHT11.c:22:13:Set_Pin_Input	40	static
-../Core/driver/DHT11/DHT11.c:30:6:delay_us_dht	16	static
-../Core/driver/DHT11/DHT11.c:38:6:DHT11_Init	24	static
-../Core/driver/DHT11/DHT11.c:43:9:DHT11_Read	40	static
