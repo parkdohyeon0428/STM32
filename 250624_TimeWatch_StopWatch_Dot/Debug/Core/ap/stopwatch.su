@@ -3,4 +3,4 @@
 ../Core/ap/stopwatch.c:58:6:StopWatch_Excute	8	static
 ../Core/ap/stopwatch.c:74:6:StopWatch_Stop	8	static
 ../Core/ap/stopwatch.c:85:6:StopWatch_Run	8	static
-../Core/ap/stopwatch.c:107:6:StopWatch_Clear	8	static
+../Core/ap/stopwatch.c:106:6:StopWatch_Clear	8	static

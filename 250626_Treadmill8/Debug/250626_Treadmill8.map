@@ -5282,9 +5282,15 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .text.Listener_Excute
                 0x080011f4       0x10 ./Core/ap/src/Listener.o
                 0x080011f4                Listener_Excute
+<<<<<<< HEAD
  .text.Treadmill_Listener
                 0x08001204       0x90 ./Core/ap/src/Listener.o
                 0x08001204                Treadmill_Listener
+=======
+ .text.Listener_CheckButton
+                0x08001204       0x90 ./Core/ap/src/Listener.o
+                0x08001204                Listener_CheckButton
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
  .text.Listener_CheckUart
                 0x08001294       0x70 ./Core/ap/src/Listener.o
                 0x08001294                Listener_CheckUart
@@ -6449,6 +6455,7 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_line    0x000185dd     0x1964 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
  .debug_line    0x00019f41     0x25b1 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
 
+<<<<<<< HEAD
 .debug_str      0x00000000    0x918d6
  .debug_str     0x00000000    0x918d6 ./Core/Src/gpio.o
                               0x88bd8 (size before relaxing)
@@ -6485,6 +6492,44 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_str     0x000918d6    0x89f35 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
  .debug_str     0x000918d6    0x89741 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
  .debug_str     0x000918d6    0x895c0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+=======
+.debug_str      0x00000000    0x918d8
+ .debug_str     0x00000000    0x918d8 ./Core/Src/gpio.o
+                              0x88bd8 (size before relaxing)
+ .debug_str     0x000918d8    0x8910c ./Core/Src/i2c.o
+ .debug_str     0x000918d8    0x88f18 ./Core/Src/main.o
+ .debug_str     0x000918d8    0x88b0d ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_str     0x000918d8    0x8922f ./Core/Src/stm32f4xx_it.o
+ .debug_str     0x000918d8     0x7763 ./Core/Src/sysmem.o
+ .debug_str     0x000918d8    0x88bbd ./Core/Src/system_stm32f4xx.o
+ .debug_str     0x000918d8    0x897db ./Core/Src/tim.o
+ .debug_str     0x000918d8    0x89471 ./Core/Src/usart.o
+ .debug_str     0x000918d8       0x65 ./Core/Startup/startup_stm32f411retx.o
+ .debug_str     0x000918d8    0x892a5 ./Core/ap/src/Listener.o
+ .debug_str     0x000918d8    0x8ca2f ./Core/ap/src/Presenter.o
+ .debug_str     0x000918d8    0x894d9 ./Core/ap/src/ap_main.o
+ .debug_str     0x000918d8    0x88dc4 ./Core/ap/src/controller.o
+ .debug_str     0x000918d8    0x88a37 ./Core/ap/src/queue.o
+ .debug_str     0x000918d8    0x88fc2 ./Core/ap/src/sound.o
+ .debug_str     0x000918d8    0x88bf3 ./Core/ap/src/treadmill.o
+ .debug_str     0x000918d8    0x88b38 ./Core/driver/Button/Button.o
+ .debug_str     0x000918d8    0x88ff3 ./Core/driver/Buzzer/Buzzer.o
+ .debug_str     0x000918d8    0x89006 ./Core/driver/DC_Motor/DC_Motor.o
+ .debug_str     0x000918d8    0x8910d ./Core/driver/DHT11/DHT11.o
+ .debug_str     0x000918d8    0x88c0e ./Core/driver/FND/FND.o
+ .debug_str     0x000918d8    0x89107 ./Core/driver/LCD/lcd.o
+ .debug_str     0x000918d8    0x88ac9 ./Core/driver/LedBar/LedBar.o
+ .debug_str     0x000918d8    0x890df ./Core/driver/UltraSonic/UltraSonic.o
+ .debug_str     0x000918d8    0x895e9 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_str     0x000918d8    0x89353 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_str     0x000918d8    0x88fc5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+ .debug_str     0x000918d8    0x88d38 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_str     0x000918d8    0x89bce ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
+ .debug_str     0x000918d8    0x88ff1 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_str     0x000918d8    0x89f35 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_str     0x000918d8    0x89741 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_str     0x000918d8    0x895c0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 ./Core/Src/gpio.o

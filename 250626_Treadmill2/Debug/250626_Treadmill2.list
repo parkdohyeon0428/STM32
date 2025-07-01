@@ -2481,10 +2481,10 @@ Infinite_Loop:
 	...
 
 080010a0 <Listener_Init>:
+static uint8_t rcvData = 0;
 static Que_TypeDef uartRxQue;
-UltraSonic_TypeDef sensor;
 inputData_TypeDef inputData;
-
+UltraSonic_TypeDef sensor;
 void Listener_Init()
 {
  80010a0:	b580      	push	{r7, lr}

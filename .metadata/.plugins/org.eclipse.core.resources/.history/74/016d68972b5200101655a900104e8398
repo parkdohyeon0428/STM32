@@ -1,5 +1,0 @@
-../Core/ap/src/Listener.c:22:6:Listener_Init	1
-../Core/ap/src/Listener.c:32:6:Listener_Excute	1
-../Core/ap/src/Listener.c:38:6:Listener_CheckButton	5
-../Core/ap/src/Listener.c:66:6:Listener_CheckUart	6
-../Core/ap/src/Listener.c:99:6:Listener_UartCallBack	1

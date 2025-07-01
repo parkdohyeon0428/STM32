@@ -39,9 +39,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   0001c4f2  00000000  00000000  0003cf6f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
+<<<<<<< HEAD
  18 .debug_str    000918d6  00000000  00000000  00059461  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  19 .comment      00000043  00000000  00000000  000ead37  2**0
+=======
+ 18 .debug_str    000918d8  00000000  00000000  00059461  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 19 .comment      00000043  00000000  00000000  000ead39  2**0
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
                   CONTENTS, READONLY
  20 .debug_frame  00005170  00000000  00000000  000ead7c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -2681,17 +2687,28 @@ void Listener_Excute()
 {
  80011f4:	b580      	push	{r7, lr}
  80011f6:	af00      	add	r7, sp, #0
+<<<<<<< HEAD
 	Treadmill_Listener();
  80011f8:	f000 f804 	bl	8001204 <Treadmill_Listener>
+=======
+	Listener_CheckButton();
+ 80011f8:	f000 f804 	bl	8001204 <Listener_CheckButton>
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
 	Listener_CheckUart();
  80011fc:	f000 f84a 	bl	8001294 <Listener_CheckUart>
 }
  8001200:	bf00      	nop
  8001202:	bd80      	pop	{r7, pc}
 
+<<<<<<< HEAD
 08001204 <Treadmill_Listener>:
 
 void Treadmill_Listener()
+=======
+08001204 <Listener_CheckButton>:
+
+void Listener_CheckButton()
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
 {
  8001204:	b580      	push	{r7, lr}
  8001206:	b082      	sub	sp, #8
@@ -2701,18 +2718,29 @@ void Treadmill_Listener()
  800120a:	f001 fa97 	bl	800273c <HAL_GetTick>
  800120e:	6078      	str	r0, [r7, #4]
     if (curTick - prevChkTime < 50) return;
+<<<<<<< HEAD
  8001210:	4b1a      	ldr	r3, [pc, #104]	@ (800127c <Treadmill_Listener+0x78>)
+=======
+ 8001210:	4b1a      	ldr	r3, [pc, #104]	@ (800127c <Listener_CheckButton+0x78>)
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
  8001212:	681b      	ldr	r3, [r3, #0]
  8001214:	687a      	ldr	r2, [r7, #4]
  8001216:	1ad3      	subs	r3, r2, r3
  8001218:	2b31      	cmp	r3, #49	@ 0x31
+<<<<<<< HEAD
  800121a:	d92a      	bls.n	8001272 <Treadmill_Listener+0x6e>
     prevChkTime = curTick;
  800121c:	4a17      	ldr	r2, [pc, #92]	@ (800127c <Treadmill_Listener+0x78>)
+=======
+ 800121a:	d92a      	bls.n	8001272 <Listener_CheckButton+0x6e>
+    prevChkTime = curTick;
+ 800121c:	4a17      	ldr	r2, [pc, #92]	@ (800127c <Listener_CheckButton+0x78>)
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
  800121e:	687b      	ldr	r3, [r7, #4]
  8001220:	6013      	str	r3, [r2, #0]
 
     if (Button_GetState(&hBtnSTART) == ACT_PUSHED) {
+<<<<<<< HEAD
  8001222:	4817      	ldr	r0, [pc, #92]	@ (8001280 <Treadmill_Listener+0x7c>)
  8001224:	f000 fbf2 	bl	8001a0c <Button_GetState>
  8001228:	4603      	mov	r3, r0
@@ -2763,6 +2791,58 @@ void Treadmill_Listener()
  800126c:	2204      	movs	r2, #4
  800126e:	701a      	strb	r2, [r3, #0]
  8001270:	e000      	b.n	8001274 <Treadmill_Listener+0x70>
+=======
+ 8001222:	4817      	ldr	r0, [pc, #92]	@ (8001280 <Listener_CheckButton+0x7c>)
+ 8001224:	f000 fbf2 	bl	8001a0c <Button_GetState>
+ 8001228:	4603      	mov	r3, r0
+ 800122a:	2b01      	cmp	r3, #1
+ 800122c:	d103      	bne.n	8001236 <Listener_CheckButton+0x32>
+
+    	inputdata = TREADMILL_START;
+ 800122e:	4b15      	ldr	r3, [pc, #84]	@ (8001284 <Listener_CheckButton+0x80>)
+ 8001230:	2201      	movs	r2, #1
+ 8001232:	701a      	strb	r2, [r3, #0]
+ 8001234:	e01e      	b.n	8001274 <Listener_CheckButton+0x70>
+    }
+    else if (Button_GetState(&hBtnSTOP) == ACT_PUSHED) {
+ 8001236:	4814      	ldr	r0, [pc, #80]	@ (8001288 <Listener_CheckButton+0x84>)
+ 8001238:	f000 fbe8 	bl	8001a0c <Button_GetState>
+ 800123c:	4603      	mov	r3, r0
+ 800123e:	2b01      	cmp	r3, #1
+ 8001240:	d103      	bne.n	800124a <Listener_CheckButton+0x46>
+
+    	inputdata = TREADMILL_STOP;
+ 8001242:	4b10      	ldr	r3, [pc, #64]	@ (8001284 <Listener_CheckButton+0x80>)
+ 8001244:	2202      	movs	r2, #2
+ 8001246:	701a      	strb	r2, [r3, #0]
+ 8001248:	e014      	b.n	8001274 <Listener_CheckButton+0x70>
+    }
+    else if (Button_GetState(&hBtnUP) == ACT_PUSHED) {
+ 800124a:	4810      	ldr	r0, [pc, #64]	@ (800128c <Listener_CheckButton+0x88>)
+ 800124c:	f000 fbde 	bl	8001a0c <Button_GetState>
+ 8001250:	4603      	mov	r3, r0
+ 8001252:	2b01      	cmp	r3, #1
+ 8001254:	d103      	bne.n	800125e <Listener_CheckButton+0x5a>
+
+    	inputdata = TREADMILL_UP;
+ 8001256:	4b0b      	ldr	r3, [pc, #44]	@ (8001284 <Listener_CheckButton+0x80>)
+ 8001258:	2203      	movs	r2, #3
+ 800125a:	701a      	strb	r2, [r3, #0]
+ 800125c:	e00a      	b.n	8001274 <Listener_CheckButton+0x70>
+    }
+    else if (Button_GetState(&hBtnDOWN) == ACT_PUSHED) {
+ 800125e:	480c      	ldr	r0, [pc, #48]	@ (8001290 <Listener_CheckButton+0x8c>)
+ 8001260:	f000 fbd4 	bl	8001a0c <Button_GetState>
+ 8001264:	4603      	mov	r3, r0
+ 8001266:	2b01      	cmp	r3, #1
+ 8001268:	d104      	bne.n	8001274 <Listener_CheckButton+0x70>
+
+    	inputdata = TREADMILL_DOWN;
+ 800126a:	4b06      	ldr	r3, [pc, #24]	@ (8001284 <Listener_CheckButton+0x80>)
+ 800126c:	2204      	movs	r2, #4
+ 800126e:	701a      	strb	r2, [r3, #0]
+ 8001270:	e000      	b.n	8001274 <Listener_CheckButton+0x70>
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
     if (curTick - prevChkTime < 50) return;
  8001272:	bf00      	nop
     }
@@ -3523,7 +3603,10 @@ void controller_dht()
 
 08001714 <controller_treadmill>:
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
 void controller_treadmill()
 {
  8001714:	b580      	push	{r7, lr}
@@ -4522,7 +4605,10 @@ uint8_t DHT11_Read(DHT11_TypeDef *dht, uint8_t *temp, uint8_t *humi) {
  8001d14:	601a      	str	r2, [r3, #0]
  8001d16:	711a      	strb	r2, [r3, #4]
 
+<<<<<<< HEAD
     // Start signal
+=======
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
     Set_Pin_Output(dht);
  8001d18:	68f8      	ldr	r0, [r7, #12]
  8001d1a:	f7ff ff83 	bl	8001c24 <Set_Pin_Output>
@@ -4553,7 +4639,10 @@ uint8_t DHT11_Read(DHT11_TypeDef *dht, uint8_t *temp, uint8_t *humi) {
  8001d4c:	68f8      	ldr	r0, [r7, #12]
  8001d4e:	f7ff ff8a 	bl	8001c66 <Set_Pin_Input>
 
+<<<<<<< HEAD
     // 응답 신호 대기
+=======
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
     uint32_t timeout = 0;
  8001d52:	2300      	movs	r3, #0
  8001d54:	61fb      	str	r3, [r7, #28]
@@ -4606,7 +4695,10 @@ uint8_t DHT11_Read(DHT11_TypeDef *dht, uint8_t *temp, uint8_t *humi) {
  8001dae:	2b01      	cmp	r3, #1
  8001db0:	d0f4      	beq.n	8001d9c <DHT11_Read+0x9a>
 
+<<<<<<< HEAD
     // 40bit 데이터 수신
+=======
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
     for (int i = 0; i < 40; i++) {
  8001db2:	2300      	movs	r3, #0
  8001db4:	61bb      	str	r3, [r7, #24]
@@ -4704,7 +4796,10 @@ uint8_t DHT11_Read(DHT11_TypeDef *dht, uint8_t *temp, uint8_t *humi) {
  8001e6a:	dda5      	ble.n	8001db8 <DHT11_Read+0xb6>
     }
 
+<<<<<<< HEAD
     // 체크섬 검증
+=======
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
     if (data[4] == (data[0] + data[1] + data[2] + data[3])) {
  8001e6c:	7d3b      	ldrb	r3, [r7, #20]
  8001e6e:	461a      	mov	r2, r3
@@ -4730,7 +4825,10 @@ uint8_t DHT11_Read(DHT11_TypeDef *dht, uint8_t *temp, uint8_t *humi) {
  8001e90:	2300      	movs	r3, #0
  8001e92:	e000      	b.n	8001e96 <DHT11_Read+0x194>
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
     return 2;
  8001e94:	2302      	movs	r3, #2
 }

@@ -1,5 +1,0 @@
-../Core/ap/src/Listener.c:18:6:Listener_Init	8	static
-../Core/ap/src/Listener.c:28:6:Listener_Excute	8	static
-../Core/ap/src/Listener.c:34:6:Listener_CheckButton	16	static
-../Core/ap/src/Listener.c:63:6:Listener_CheckUart	16	static
-../Core/ap/src/Listener.c:90:6:Listener_UartCallBack	8	static

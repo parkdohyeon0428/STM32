@@ -1,0 +1,12 @@
+/*
+ * tread.c
+ *
+ *  Created on: Jun 29, 2025
+ *      Author: kccistc
+ */
+
+#include "tread.h"
+
+static TreadmillState_t prevState = -1;
+
+void

@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  00015efb  00000000  00000000  00010f2c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000d923  00000000  00000000  00026e27  2**0
+ 17 .debug_line   0000d922  00000000  00000000  00026e27  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000882f8  00000000  00000000  0003474a  2**0
+ 18 .debug_str    000882f8  00000000  00000000  00034749  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000bca42  2**0
+ 19 .comment      00000043  00000000  00000000  000bca41  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00002a20  00000000  00000000  000bca88  2**2
+ 20 .debug_frame  00002a20  00000000  00000000  000bca84  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000056  00000000  00000000  000bf4a8  2**0
+ 21 .debug_line_str 00000056  00000000  00000000  000bf4a4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1765,7 +1765,6 @@ void StopWatch_Run()
    else {
       FND_WriteDp(FND_DP_1000, FND_DP_OFF);
    }
-
 }
  8000c48:	e003      	b.n	8000c52 <StopWatch_Run+0xb6>
       FND_WriteDp(FND_DP_1000, FND_DP_OFF);
@@ -2107,8 +2106,8 @@ button_state_t Button_GetState(Button_Handler_t *hbtn)
 	...
 
 08000e60 <FND_WriteDp>:
-
-
+static uint16_t fndDispNum = 0; // fnd digit data
+static uint8_t fndDispDp = 0;  // fnd dp data, xxxx1111 -> xxxx_dp1000_dp100_dp10_dp1 이렇게 보고 싶은것.
 
 
 void FND_WriteDp(uint8_t dpData, uint8_t dpState)
@@ -2604,9 +2603,9 @@ void FND_DispDigit(uint16_t digit)
  80011d8:	f107 0308 	add.w	r3, r7, #8
  80011dc:	ca07      	ldmia	r2, {r0, r1, r2}
  80011de:	e883 0007 	stmia.w	r3, {r0, r1, r2}
-         0x6F,  // 9 => 01101111
-         0x80,  // 10(dp) => 1000000
-       0x00,  // 11(off) => 0000000
+         0x6F, // 9 => 01101111
+         0x80, // 10(dp) => 1000000
+         0x00, // 11(off) => 0000000
       };
 
    for (int i = 0; i<8;i++){

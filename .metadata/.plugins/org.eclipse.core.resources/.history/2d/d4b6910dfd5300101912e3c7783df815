@@ -1,4 +1,0 @@
-../Core/ap/src/treadmill.c:24:5:treadmill_GetState	5
-../Core/ap/src/treadmill.c:41:6:treadmill_run	16
-../Core/ap/src/treadmill.c:81:6:treadmill_emergency	4
-../Core/ap/src/treadmill.c:92:6:Listener_UartCallBack	1
