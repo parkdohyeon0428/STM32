@@ -1,4 +1,0 @@
-../Core/ap/src/treadmill.c:16:6:treadmill_start	8	static
-../Core/ap/src/treadmill.c:22:6:treadmill_stop	8	static
-../Core/ap/src/treadmill.c:27:6:treadmill_up	4	static
-../Core/ap/src/treadmill.c:33:6:treadmill_down	4	static
