@@ -1,5 +1,0 @@
-../Core/ap/src/sound.c:9:6:Sound_Init	8	static
-../Core/ap/src/sound.c:14:6:Sound_PowerOn	16	static
-../Core/ap/src/sound.c:34:6:Sound_PowerOff	8	static
-../Core/ap/src/sound.c:39:6:Sound_ChangeMode	4	static
-../Core/ap/src/sound.c:44:6:Sound_Alarm	4	static

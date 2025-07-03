@@ -1,9 +1,5 @@
 ../Core/ap/src/Listener.c:21:6:Listener_Init	16	static
 ../Core/ap/src/Listener.c:32:6:Listener_Excute	8	static
-<<<<<<< HEAD
-../Core/ap/src/Listener.c:38:6:Treadmill_Listener	16	static
-=======
 ../Core/ap/src/Listener.c:38:6:Listener_CheckButton	16	static
->>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
 ../Core/ap/src/Listener.c:63:6:Listener_CheckUart	16	static
 ../Core/ap/src/Listener.c:92:6:Listener_UartCallBack	8	static
