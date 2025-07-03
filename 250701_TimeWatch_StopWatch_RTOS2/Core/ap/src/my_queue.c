@@ -38,11 +38,11 @@ int isQueEmpty(Que_TypeDef *q)
 bool enQue(Que_TypeDef *q, void *pData)
 {
 	if (isQueFull(q)) {
-		return true;
+		return false;
 	}
 	memcpy(q->queData[q->rear], pData, q->typeSize);
-
 	q->rear = (q->rear+1) % QUE_SIZE;
+	return true;
 }
 
 bool deQue(Que_TypeDef *q, void *pData)
@@ -54,7 +54,7 @@ bool deQue(Que_TypeDef *q, void *pData)
 
 	int data = q->queData[q->front];
 	q->front = (q->front+1) % QUE_SIZE;
-	return false;
+	return true;
 }
 
 bool peekQue(Que_TypeDef *q, void *pData)

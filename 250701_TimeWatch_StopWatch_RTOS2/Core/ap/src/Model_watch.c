@@ -16,8 +16,3 @@ void Model_Init()
 	Que_Init(&btnQue, sizeof(button_t));
 	Que_Init(&stopWatchQue, sizeof(watch_t));
 }
-
-//void Model_Setup()
-//{
-//
-//}
