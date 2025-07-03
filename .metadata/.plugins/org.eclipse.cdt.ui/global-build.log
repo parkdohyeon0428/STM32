@@ -1,35 +1,860 @@
-16:59:04 **** Incremental Build of configuration Debug for project 250702_RTOS_Led_Button ****
+16:03:39 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250702_RTOS_Led_Button/Core/driver/Button" -I"D:/STM32/250702_RTOS_Led_Button/Core/driver/LedBar" -I"D:/STM32/250702_RTOS_Led_Button/Core/driver" -I"D:/STM32/250702_RTOS_Led_Button/Core/driver/LCD" -I"D:/STM32/250702_RTOS_Led_Button/Core/driver/FND" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
-arm-none-eabi-gcc -o "250702_RTOS_Led_Button.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250702_RTOS_Led_Button\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250702_RTOS_Led_Button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250702_RTOS_Led_Button.elf
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter.d" -MT"Core/ap/Presenter/Presenter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter.o"
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:47:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   47 |         sprintf(str, "stop watch : %02d:%02d:%02d.%03d\n", pStopWatchData->hour, pStopWatchData->min, pStopWatchData->sec, pStopWatchData->msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:9:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    8 | #include "Presenter_StopWatch.h"
+  +++ |+#include <stdio.h>
+    9 | 
+../Core/ap/Presenter/Presenter_StopWatch.c:47:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   47 |         sprintf(str, "stop watch : %02d:%02d:%02d.%03d\n", pStopWatchData->hour, pStopWatchData->min, pStopWatchData->sec, pStopWatchData->msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:47:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
  
-arm-none-eabi-size  250702_RTOS_Led_Button.elf 
-arm-none-eabi-objdump -h -S 250702_RTOS_Led_Button.elf  > "250702_RTOS_Led_Button.list"
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
    text	   data	    bss	    dec	    hex	filename
-  30300	    256	  18600	  49156	   c004	250702_RTOS_Led_Button.elf
+  26012	    192	  18576	  44780	   aeec	250703_RTOS_StopWatch2.elf
 Finished building: default.size.stdout
  
-Finished building: 250702_RTOS_Led_Button.list
+Finished building: 250703_RTOS_StopWatch2.list
  
-16:59:06 **** Incremental Build of configuration Debug for project 250702_RTOS_Led_Button ****
+16:03:46 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
 make -j16 all 
-arm-none-eabi-size  250702_RTOS_Led_Button.elf 
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
    text	   data	    bss	    dec	    hex	filename
-  30300	    256	  18600	  49156	   c004	250702_RTOS_Led_Button.elf
+  26012	    192	  18576	  44780	   aeec	250703_RTOS_StopWatch2.elf
 Finished building: default.size.stdout
  
-16:59:44 **** Incremental Build of configuration Debug for project 250702_RTOS_Led_Button ****
+16:07:51 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250702_RTOS_Led_Button/Core/driver/Button" -I"D:/STM32/250702_RTOS_Led_Button/Core/driver/LedBar" -I"D:/STM32/250702_RTOS_Led_Button/Core/driver" -I"D:/STM32/250702_RTOS_Led_Button/Core/driver/LCD" -I"D:/STM32/250702_RTOS_Led_Button/Core/driver/FND" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
-arm-none-eabi-gcc -o "250702_RTOS_Led_Button.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250702_RTOS_Led_Button\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250702_RTOS_Led_Button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250702_RTOS_Led_Button.elf
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:48:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   48 |         sprintf(str, "stop watch : %02d:%02d:%02d.%03d\n", pStopWatchData->hour, pStopWatchData->min, pStopWatchData->sec, pStopWatchData->msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:9:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    8 | #include "Presenter_StopWatch.h"
+  +++ |+#include <stdio.h>
+    9 | 
+../Core/ap/Presenter/Presenter_StopWatch.c:48:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   48 |         sprintf(str, "stop watch : %02d:%02d:%02d.%03d\n", pStopWatchData->hour, pStopWatchData->min, pStopWatchData->sec, pStopWatchData->msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:48:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
  
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
+   text	   data	    bss	    dec	    hex	filename
+  28784	    192	  18592	  47568	   b9d0	250703_RTOS_StopWatch2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250703_RTOS_StopWatch2.list
+ 
+16:08:22 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:48:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   48 |         sprintf(str, "s %02d:%02d:%02d.%03d\n", pStopWatchData->hour, pStopWatchData->min, pStopWatchData->sec, pStopWatchData->msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:9:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    8 | #include "Presenter_StopWatch.h"
+  +++ |+#include <stdio.h>
+    9 | 
+../Core/ap/Presenter/Presenter_StopWatch.c:48:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   48 |         sprintf(str, "s %02d:%02d:%02d.%03d\n", pStopWatchData->hour, pStopWatchData->min, pStopWatchData->sec, pStopWatchData->msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:48:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
+ 
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
+   text	   data	    bss	    dec	    hex	filename
+  28772	    192	  18592	  47556	   b9c4	250703_RTOS_StopWatch2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250703_RTOS_StopWatch2.list
+ 
+16:12:35 **** Incremental Build of configuration Debug for project 20250530_VGA_OV7670 ****
+make -j16 all 
+arm-none-eabi-size  20250530_VGA_OV7670.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11840	     16	   1664	  13520	   34d0	20250530_VGA_OV7670.elf
+Finished building: default.size.stdout
+ 
+16:12:36 **** Incremental Build of configuration Debug for project 20250626_treadmill1 ****
+make -j16 all 
+arm-none-eabi-size  20250626_treadmill1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25732	    260	   2484	  28476	   6f3c	20250626_treadmill1.elf
+Finished building: default.size.stdout
+ 
+16:12:36 **** Incremental Build of configuration Debug for project 250518_led ****
+make -j16 all 
+arm-none-eabi-size  250518_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6032	     12	   1572	   7616	   1dc0	250518_led.elf
+Finished building: default.size.stdout
+ 
+16:12:36 **** Incremental Build of configuration Debug for project 250618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  250618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1276	     64	   1568	   2908	    b5c	250618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:12:36 **** Incremental Build of configuration Debug for project 250619_button_led ****
+make -j16 all 
+arm-none-eabi-size  250619_button_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1676	     64	   1600	   3340	    d0c	250619_button_led.elf
+Finished building: default.size.stdout
+ 
+16:12:37 **** Incremental Build of configuration Debug for project 250619_counter ****
+make -j16 all 
+arm-none-eabi-size  250619_counter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3132	     96	   1600	   4828	   12dc	250619_counter.elf
+Finished building: default.size.stdout
+ 
+16:12:37 **** Incremental Build of configuration Debug for project 250620_FND_TIM_interrupt ****
+make -j16 all 
+arm-none-eabi-size  250620_FND_TIM_interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2212	     96	   1616	   3924	    f54	250620_FND_TIM_interrupt.elf
+Finished building: default.size.stdout
+ 
+16:12:37 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
+make -j16 all 
+arm-none-eabi-size  250620_watch_stopwatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3700	    100	   1636	   5436	   153c	250620_watch_stopwatch.elf
+Finished building: default.size.stdout
+ 
+16:12:37 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
+make -j16 all 
+arm-none-eabi-size  250623_TimeWatch_StopWatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11144	    120	   1704	  12968	   32a8	250623_TimeWatch_StopWatch.elf
+Finished building: default.size.stdout
+ 
+16:12:37 **** Incremental Build of configuration Debug for project 250624_TimeWatch_StopWatch_Dot ****
+make -j16 all 
+arm-none-eabi-size  250624_TimeWatch_StopWatch_Dot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10980	    116	   1700	  12796	   31fc	250624_TimeWatch_StopWatch_Dot.elf
+Finished building: default.size.stdout
+ 
+16:12:38 **** Incremental Build of configuration Debug for project 250624_TimeWatch_StopWatch_in_Proc_out_Struc ****
+make -j16 all 
+arm-none-eabi-size  250624_TimeWatch_StopWatch_in_Proc_out_Struc.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16576	    212	   2100	  18888	   49c8	250624_TimeWatch_StopWatch_in_Proc_out_Struc.elf
+Finished building: default.size.stdout
+ 
+16:12:38 **** Incremental Build of configuration Debug for project 250625_TimeWatch_StopWatch_rx ****
+make -j16 all 
+arm-none-eabi-size  250625_TimeWatch_StopWatch_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17032	    212	   2100	  19344	   4b90	250625_TimeWatch_StopWatch_rx.elf
+Finished building: default.size.stdout
+ 
+16:12:38 **** Incremental Build of configuration Debug for project 250626_TimeWatch_StopWatch_buzzer ****
+make -j16 all 
+arm-none-eabi-size  250626_TimeWatch_StopWatch_buzzer.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21288	    124	   2044	  23456	   5ba0	250626_TimeWatch_StopWatch_buzzer.elf
+Finished building: default.size.stdout
+ 
+16:12:38 **** Incremental Build of configuration Debug for project 250626_Treadmill ****
+make -j16 all 
+arm-none-eabi-size  250626_Treadmill.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27464	    260	   2596	  30320	   7670	250626_Treadmill.elf
+Finished building: default.size.stdout
+ 
+16:12:39 **** Incremental Build of configuration Debug for project 250626_Treadmill4 ****
+make -j16 all 
+arm-none-eabi-size  250626_Treadmill4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25988	    260	   2508	  28756	   7054	250626_Treadmill4.elf
+Finished building: default.size.stdout
+ 
+16:12:39 **** Incremental Build of configuration Debug for project 250626_Treadmill5 ****
+make -j16 all 
+arm-none-eabi-size  250626_Treadmill5.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22928	    116	   2220	  25264	   62b0	250626_Treadmill5.elf
+Finished building: default.size.stdout
+ 
+16:12:39 **** Incremental Build of configuration Debug for project 250626_Treadmill6 ****
+make -j16 all 
+arm-none-eabi-size  250626_Treadmill6.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27136	    260	   2596	  29992	   7528	250626_Treadmill6.elf
+Finished building: default.size.stdout
+ 
+16:12:40 **** Incremental Build of configuration Debug for project 250626_Treadmill7 ****
+make -j16 all 
+arm-none-eabi-size  250626_Treadmill7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27344	    260	   2580	  30184	   75e8	250626_Treadmill7.elf
+Finished building: default.size.stdout
+ 
+16:12:40 **** Incremental Build of configuration Debug for project 250701_ARM_LedBilnk ****
+make -j16 all 
+arm-none-eabi-size  250701_ARM_LedBilnk.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13996	     96	  18352	  32444	   7ebc	250701_ARM_LedBilnk.elf
+Finished building: default.size.stdout
+ 
+16:12:40 **** Incremental Build of configuration Debug for project 250701_TimeWatch_StopWatch_RTOS2 ****
+make -j16 all 
+arm-none-eabi-size  250701_TimeWatch_StopWatch_RTOS2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23388	    216	  18720	  42324	   a554	250701_TimeWatch_StopWatch_RTOS2.elf
+Finished building: default.size.stdout
+ 
+16:12:40 **** Incremental Build of configuration Debug for project 250702_RTOS_Led_Button ****
+make -j16 all 
 arm-none-eabi-size  250702_RTOS_Led_Button.elf 
-arm-none-eabi-objdump -h -S 250702_RTOS_Led_Button.elf  > "250702_RTOS_Led_Button.list"
    text	   data	    bss	    dec	    hex	filename
   30284	    256	  18600	  49140	   bff4	250702_RTOS_Led_Button.elf
 Finished building: default.size.stdout
  
-Finished building: 250702_RTOS_Led_Button.list
+16:12:41 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch ****
+make -j16 all 
+arm-none-eabi-size  250703_RTOS_StopWatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23132	    192	  18560	  41884	   a39c	250703_RTOS_StopWatch.elf
+Finished building: default.size.stdout
+ 
+16:12:41 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatchExecute':
+../Core/ap/Presenter/Presenter_StopWatch.c:18:33: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+   18 |         stopWatch_t stopWatch_t *pStopWatchData;;
+      |                                 ^
+../Core/ap/Presenter/Presenter_StopWatch.c:18:33: warning: statement with no effect [-Wunused-value]
+   18 |         stopWatch_t stopWatch_t *pStopWatchData;;
+      |                                 ^~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:49:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   49 |         sprintf(str, "s %02d:%02d:%02d.%03d\n", pStopWatchData->hour, pStopWatchData->min, pStopWatchData->sec, pStopWatchData->msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:9:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    8 | #include "Presenter_StopWatch.h"
+  +++ |+#include <stdio.h>
+    9 | 
+../Core/ap/Presenter/Presenter_StopWatch.c:49:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   49 |         sprintf(str, "s %02d:%02d:%02d.%03d\n", pStopWatchData->hour, pStopWatchData->min, pStopWatchData->sec, pStopWatchData->msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:49:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+make: *** [Core/ap/Presenter/subdir.mk:22: Core/ap/Presenter/Presenter_StopWatch.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:13:39 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatchExecute':
+../Core/ap/Presenter/Presenter_StopWatch.c:18:21: warning: unused variable 'stopWatch' [-Wunused-variable]
+   18 |         stopWatch_t stopWatch;
+      |                     ^~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: At top level:
+../Core/ap/Presenter/Presenter_StopWatch.c:46:6: error: conflicting types for 'Presenter_StopWatch_LCD'; have 'void(stopWatch_t)'
+   46 | void Presenter_StopWatch_LCD(stopWatch_t stopWatch)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/ap/Presenter/Presenter_StopWatch.c:8:
+../Core/ap/Presenter/Presenter_StopWatch.h:21:6: note: previous declaration of 'Presenter_StopWatch_LCD' with type 'void(stopWatch_t *)'
+   21 | void Presenter_StopWatch_LCD(stopWatch_t *pStopWatchData);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:49:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   49 |         sprintf(str, "s %02d:%02d:%02d.%03d\n", stopWatch.hour, stopWatch.min, stopWatch.sec, stopWatch.msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:9:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    8 | #include "Presenter_StopWatch.h"
+  +++ |+#include <stdio.h>
+    9 | 
+../Core/ap/Presenter/Presenter_StopWatch.c:49:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   49 |         sprintf(str, "s %02d:%02d:%02d.%03d\n", stopWatch.hour, stopWatch.min, stopWatch.sec, stopWatch.msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:49:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+make: *** [Core/ap/Presenter/subdir.mk:22: Core/ap/Presenter/Presenter_StopWatch.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:14:12 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatchExecute':
+../Core/ap/Presenter/Presenter_StopWatch.c:18:33: error: invalid initializer
+   18 |         stopWatch_t stopWatch = 0;
+      |                                 ^
+../Core/ap/Presenter/Presenter_StopWatch.c:18:21: warning: unused variable 'stopWatch' [-Wunused-variable]
+   18 |         stopWatch_t stopWatch = 0;
+      |                     ^~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: At top level:
+../Core/ap/Presenter/Presenter_StopWatch.c:46:6: error: conflicting types for 'Presenter_StopWatch_LCD'; have 'void(stopWatch_t)'
+   46 | void Presenter_StopWatch_LCD(stopWatch_t stopWatch)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/ap/Presenter/Presenter_StopWatch.c:8:
+../Core/ap/Presenter/Presenter_StopWatch.h:21:6: note: previous declaration of 'Presenter_StopWatch_LCD' with type 'void(stopWatch_t *)'
+   21 | void Presenter_StopWatch_LCD(stopWatch_t *pStopWatchData);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:49:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   49 |         sprintf(str, "s %02d:%02d:%02d.%03d\n", stopWatch.hour, stopWatch.min, stopWatch.sec, stopWatch.msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:9:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    8 | #include "Presenter_StopWatch.h"
+  +++ |+#include <stdio.h>
+    9 | 
+../Core/ap/Presenter/Presenter_StopWatch.c:49:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   49 |         sprintf(str, "s %02d:%02d:%02d.%03d\n", stopWatch.hour, stopWatch.min, stopWatch.sec, stopWatch.msec);
+      |         ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:49:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+make: *** [Core/ap/Presenter/subdir.mk:22: Core/ap/Presenter/Presenter_StopWatch.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:17:22 **** Incremental Build of configuration Debug for project 20250530_VGA_OV7670 ****
+make -j16 all 
+arm-none-eabi-size  20250530_VGA_OV7670.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11840	     16	   1664	  13520	   34d0	20250530_VGA_OV7670.elf
+Finished building: default.size.stdout
+ 
+16:17:22 **** Incremental Build of configuration Debug for project 20250626_treadmill1 ****
+make -j16 all 
+arm-none-eabi-size  20250626_treadmill1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25732	    260	   2484	  28476	   6f3c	20250626_treadmill1.elf
+Finished building: default.size.stdout
+ 
+16:17:22 **** Incremental Build of configuration Debug for project 250518_led ****
+make -j16 all 
+arm-none-eabi-size  250518_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6032	     12	   1572	   7616	   1dc0	250518_led.elf
+Finished building: default.size.stdout
+ 
+16:17:22 **** Incremental Build of configuration Debug for project 250618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  250618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1276	     64	   1568	   2908	    b5c	250618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:17:23 **** Incremental Build of configuration Debug for project 250619_button_led ****
+make -j16 all 
+arm-none-eabi-size  250619_button_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1676	     64	   1600	   3340	    d0c	250619_button_led.elf
+Finished building: default.size.stdout
+ 
+16:17:23 **** Incremental Build of configuration Debug for project 250619_counter ****
+make -j16 all 
+arm-none-eabi-size  250619_counter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3132	     96	   1600	   4828	   12dc	250619_counter.elf
+Finished building: default.size.stdout
+ 
+16:17:23 **** Incremental Build of configuration Debug for project 250620_FND_TIM_interrupt ****
+make -j16 all 
+arm-none-eabi-size  250620_FND_TIM_interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2212	     96	   1616	   3924	    f54	250620_FND_TIM_interrupt.elf
+Finished building: default.size.stdout
+ 
+16:17:23 **** Incremental Build of configuration Debug for project 250620_watch_stopwatch ****
+make -j16 all 
+arm-none-eabi-size  250620_watch_stopwatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3700	    100	   1636	   5436	   153c	250620_watch_stopwatch.elf
+Finished building: default.size.stdout
+ 
+16:17:23 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
+make -j16 all 
+arm-none-eabi-size  250623_TimeWatch_StopWatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11144	    120	   1704	  12968	   32a8	250623_TimeWatch_StopWatch.elf
+Finished building: default.size.stdout
+ 
+16:17:24 **** Incremental Build of configuration Debug for project 250624_TimeWatch_StopWatch_Dot ****
+make -j16 all 
+arm-none-eabi-size  250624_TimeWatch_StopWatch_Dot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10980	    116	   1700	  12796	   31fc	250624_TimeWatch_StopWatch_Dot.elf
+Finished building: default.size.stdout
+ 
+16:17:24 **** Incremental Build of configuration Debug for project 250624_TimeWatch_StopWatch_in_Proc_out_Struc ****
+make -j16 all 
+arm-none-eabi-size  250624_TimeWatch_StopWatch_in_Proc_out_Struc.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16576	    212	   2100	  18888	   49c8	250624_TimeWatch_StopWatch_in_Proc_out_Struc.elf
+Finished building: default.size.stdout
+ 
+16:17:24 **** Incremental Build of configuration Debug for project 250625_TimeWatch_StopWatch_rx ****
+make -j16 all 
+arm-none-eabi-size  250625_TimeWatch_StopWatch_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17032	    212	   2100	  19344	   4b90	250625_TimeWatch_StopWatch_rx.elf
+Finished building: default.size.stdout
+ 
+16:17:24 **** Incremental Build of configuration Debug for project 250626_TimeWatch_StopWatch_buzzer ****
+make -j16 all 
+arm-none-eabi-size  250626_TimeWatch_StopWatch_buzzer.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21288	    124	   2044	  23456	   5ba0	250626_TimeWatch_StopWatch_buzzer.elf
+Finished building: default.size.stdout
+ 
+16:17:25 **** Incremental Build of configuration Debug for project 250626_Treadmill ****
+make -j16 all 
+arm-none-eabi-size  250626_Treadmill.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27464	    260	   2596	  30320	   7670	250626_Treadmill.elf
+Finished building: default.size.stdout
+ 
+16:17:25 **** Incremental Build of configuration Debug for project 250626_Treadmill4 ****
+make -j16 all 
+arm-none-eabi-size  250626_Treadmill4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25988	    260	   2508	  28756	   7054	250626_Treadmill4.elf
+Finished building: default.size.stdout
+ 
+16:17:25 **** Incremental Build of configuration Debug for project 250626_Treadmill5 ****
+make -j16 all 
+arm-none-eabi-size  250626_Treadmill5.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22928	    116	   2220	  25264	   62b0	250626_Treadmill5.elf
+Finished building: default.size.stdout
+ 
+16:17:25 **** Incremental Build of configuration Debug for project 250626_Treadmill6 ****
+make -j16 all 
+arm-none-eabi-size  250626_Treadmill6.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27136	    260	   2596	  29992	   7528	250626_Treadmill6.elf
+Finished building: default.size.stdout
+ 
+16:17:26 **** Incremental Build of configuration Debug for project 250626_Treadmill7 ****
+make -j16 all 
+arm-none-eabi-size  250626_Treadmill7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27344	    260	   2580	  30184	   75e8	250626_Treadmill7.elf
+Finished building: default.size.stdout
+ 
+16:17:26 **** Incremental Build of configuration Debug for project 250701_ARM_LedBilnk ****
+make -j16 all 
+arm-none-eabi-size  250701_ARM_LedBilnk.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13996	     96	  18352	  32444	   7ebc	250701_ARM_LedBilnk.elf
+Finished building: default.size.stdout
+ 
+16:17:26 **** Incremental Build of configuration Debug for project 250701_TimeWatch_StopWatch_RTOS2 ****
+make -j16 all 
+arm-none-eabi-size  250701_TimeWatch_StopWatch_RTOS2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23388	    216	  18720	  42324	   a554	250701_TimeWatch_StopWatch_RTOS2.elf
+Finished building: default.size.stdout
+ 
+16:17:26 **** Incremental Build of configuration Debug for project 250702_RTOS_Led_Button ****
+make -j16 all 
+arm-none-eabi-size  250702_RTOS_Led_Button.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30284	    256	  18600	  49140	   bff4	250702_RTOS_Led_Button.elf
+Finished building: default.size.stdout
+ 
+16:17:27 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch ****
+make -j16 all 
+arm-none-eabi-size  250703_RTOS_StopWatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23132	    192	  18560	  41884	   a39c	250703_RTOS_StopWatch.elf
+Finished building: default.size.stdout
+ 
+16:17:27 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatchExecute':
+../Core/ap/Presenter/Presenter_StopWatch.c:29:41: error: incompatible type for argument 1 of 'Presenter_StopWatch_FND'
+   29 |                 Presenter_StopWatch_FND(stopWatchData);
+      |                                         ^~~~~~~~~~~~~
+      |                                         |
+      |                                         stopWatch_t
+In file included from ../Core/ap/Presenter/Presenter_StopWatch.c:8:
+../Core/ap/Presenter/Presenter_StopWatch.h:20:43: note: expected 'stopWatch_t *' but argument is of type 'stopWatch_t'
+   20 | void Presenter_StopWatch_FND(stopWatch_t *pStopWatchData);
+      |                              ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:30:41: error: incompatible type for argument 1 of 'Presenter_StopWatch_LCD'
+   30 |                 Presenter_StopWatch_LCD(stopWatchData);
+      |                                         ^~~~~~~~~~~~~
+      |                                         |
+      |                                         stopWatch_t
+../Core/ap/Presenter/Presenter_StopWatch.h:21:43: note: expected 'stopWatch_t *' but argument is of type 'stopWatch_t'
+   21 | void Presenter_StopWatch_LCD(stopWatch_t *pStopWatchData);
+      |                              ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: At top level:
+../Core/ap/Presenter/Presenter_StopWatch.c:33:6: error: conflicting types for 'Presenter_StopWatch_FND'; have 'void(stopWatch_t)'
+   33 | void Presenter_StopWatch_FND(stopWatch_t stopWatchData)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.h:20:6: note: previous declaration of 'Presenter_StopWatch_FND' with type 'void(stopWatch_t *)'
+   20 | void Presenter_StopWatch_FND(stopWatch_t *pStopWatchData);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_FND':
+../Core/ap/Presenter/Presenter_StopWatch.c:36:13: error: 'pStopWatchData' undeclared (first use in this function); did you mean 'stopWatchData'?
+   36 |         if (pStopWatchData->msec%100 <50) {
+      |             ^~~~~~~~~~~~~~
+      |             stopWatchData
+../Core/ap/Presenter/Presenter_StopWatch.c:36:13: note: each undeclared identifier is reported only once for each function it appears in
+../Core/ap/Presenter/Presenter_StopWatch.c: At top level:
+../Core/ap/Presenter/Presenter_StopWatch.c:51:6: error: conflicting types for 'Presenter_StopWatch_LCD'; have 'void(stopWatch_t)'
+   51 | void Presenter_StopWatch_LCD(stopWatch_t stopWatch)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.h:21:6: note: previous declaration of 'Presenter_StopWatch_LCD' with type 'void(stopWatch_t *)'
+   21 | void Presenter_StopWatch_LCD(stopWatch_t *pStopWatchData);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/ap/Presenter/subdir.mk:22: Core/ap/Presenter/Presenter_StopWatch.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:17:29 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatchExecute':
+../Core/ap/Presenter/Presenter_StopWatch.c:29:41: error: incompatible type for argument 1 of 'Presenter_StopWatch_FND'
+   29 |                 Presenter_StopWatch_FND(stopWatchData);
+      |                                         ^~~~~~~~~~~~~
+      |                                         |
+      |                                         stopWatch_t
+In file included from ../Core/ap/Presenter/Presenter_StopWatch.c:8:
+../Core/ap/Presenter/Presenter_StopWatch.h:20:43: note: expected 'stopWatch_t *' but argument is of type 'stopWatch_t'
+   20 | void Presenter_StopWatch_FND(stopWatch_t *pStopWatchData);
+      |                              ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:30:41: error: incompatible type for argument 1 of 'Presenter_StopWatch_LCD'
+   30 |                 Presenter_StopWatch_LCD(stopWatchData);
+      |                                         ^~~~~~~~~~~~~
+      |                                         |
+      |                                         stopWatch_t
+../Core/ap/Presenter/Presenter_StopWatch.h:21:43: note: expected 'stopWatch_t *' but argument is of type 'stopWatch_t'
+   21 | void Presenter_StopWatch_LCD(stopWatch_t *pStopWatchData);
+      |                              ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: At top level:
+../Core/ap/Presenter/Presenter_StopWatch.c:33:6: error: conflicting types for 'Presenter_StopWatch_FND'; have 'void(stopWatch_t)'
+   33 | void Presenter_StopWatch_FND(stopWatch_t stopWatchData)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.h:20:6: note: previous declaration of 'Presenter_StopWatch_FND' with type 'void(stopWatch_t *)'
+   20 | void Presenter_StopWatch_FND(stopWatch_t *pStopWatchData);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_FND':
+../Core/ap/Presenter/Presenter_StopWatch.c:36:13: error: 'pStopWatchData' undeclared (first use in this function); did you mean 'stopWatchData'?
+   36 |         if (pStopWatchData->msec%100 <50) {
+      |             ^~~~~~~~~~~~~~
+      |             stopWatchData
+../Core/ap/Presenter/Presenter_StopWatch.c:36:13: note: each undeclared identifier is reported only once for each function it appears in
+../Core/ap/Presenter/Presenter_StopWatch.c: At top level:
+../Core/ap/Presenter/Presenter_StopWatch.c:51:6: error: conflicting types for 'Presenter_StopWatch_LCD'; have 'void(stopWatch_t)'
+   51 | void Presenter_StopWatch_LCD(stopWatch_t stopWatchData)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.h:21:6: note: previous declaration of 'Presenter_StopWatch_LCD' with type 'void(stopWatch_t *)'
+   21 | void Presenter_StopWatch_LCD(stopWatch_t *pStopWatchData);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:54:44: error: 'stopWatch' undeclared (first use in this function); did you mean 'stopWatch_t'?
+   54 |         sprintf(str, "s %02d:%02d.%03d\n", stopWatch.min, stopWatch.sec, stopWatch.msec);
+      |                                            ^~~~~~~~~
+      |                                            stopWatch_t
+make: *** [Core/ap/Presenter/subdir.mk:22: Core/ap/Presenter/Presenter_StopWatch.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:17:54 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatchExecute':
+../Core/ap/Presenter/Presenter_StopWatch.c:29:41: error: incompatible type for argument 1 of 'Presenter_StopWatch_FND'
+   29 |                 Presenter_StopWatch_FND(stopWatchData);
+      |                                         ^~~~~~~~~~~~~
+      |                                         |
+      |                                         stopWatch_t
+In file included from ../Core/ap/Presenter/Presenter_StopWatch.c:8:
+../Core/ap/Presenter/Presenter_StopWatch.h:20:43: note: expected 'stopWatch_t *' but argument is of type 'stopWatch_t'
+   20 | void Presenter_StopWatch_FND(stopWatch_t *pStopWatchData);
+      |                              ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:30:41: error: incompatible type for argument 1 of 'Presenter_StopWatch_LCD'
+   30 |                 Presenter_StopWatch_LCD(stopWatchData);
+      |                                         ^~~~~~~~~~~~~
+      |                                         |
+      |                                         stopWatch_t
+../Core/ap/Presenter/Presenter_StopWatch.h:21:43: note: expected 'stopWatch_t *' but argument is of type 'stopWatch_t'
+   21 | void Presenter_StopWatch_LCD(stopWatch_t *pStopWatchData);
+      |                              ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: At top level:
+../Core/ap/Presenter/Presenter_StopWatch.c:33:6: error: conflicting types for 'Presenter_StopWatch_FND'; have 'void(stopWatch_t)'
+   33 | void Presenter_StopWatch_FND(stopWatch_t stopWatchData)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.h:20:6: note: previous declaration of 'Presenter_StopWatch_FND' with type 'void(stopWatch_t *)'
+   20 | void Presenter_StopWatch_FND(stopWatch_t *pStopWatchData);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:51:6: error: conflicting types for 'Presenter_StopWatch_LCD'; have 'void(stopWatch_t)'
+   51 | void Presenter_StopWatch_LCD(stopWatch_t stopWatchData)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.h:21:6: note: previous declaration of 'Presenter_StopWatch_LCD' with type 'void(stopWatch_t *)'
+   21 | void Presenter_StopWatch_LCD(stopWatch_t *pStopWatchData);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:54:44: error: 'stopWatch' undeclared (first use in this function); did you mean 'stopWatch_t'?
+   54 |         sprintf(str, "s %02d:%02d.%03d\n", stopWatch.min, stopWatch.sec, stopWatch.msec);
+      |                                            ^~~~~~~~~
+      |                                            stopWatch_t
+../Core/ap/Presenter/Presenter_StopWatch.c:54:44: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/ap/Presenter/subdir.mk:22: Core/ap/Presenter/Presenter_StopWatch.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:18:08 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatchExecute':
+../Core/ap/Presenter/Presenter_StopWatch.c:29:41: error: incompatible type for argument 1 of 'Presenter_StopWatch_FND'
+   29 |                 Presenter_StopWatch_FND(stopWatchData);
+      |                                         ^~~~~~~~~~~~~
+      |                                         |
+      |                                         stopWatch_t
+In file included from ../Core/ap/Presenter/Presenter_StopWatch.c:8:
+../Core/ap/Presenter/Presenter_StopWatch.h:20:43: note: expected 'stopWatch_t *' but argument is of type 'stopWatch_t'
+   20 | void Presenter_StopWatch_FND(stopWatch_t *pStopWatchData);
+      |                              ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:30:41: error: incompatible type for argument 1 of 'Presenter_StopWatch_LCD'
+   30 |                 Presenter_StopWatch_LCD(stopWatchData);
+      |                                         ^~~~~~~~~~~~~
+      |                                         |
+      |                                         stopWatch_t
+../Core/ap/Presenter/Presenter_StopWatch.h:21:43: note: expected 'stopWatch_t *' but argument is of type 'stopWatch_t'
+   21 | void Presenter_StopWatch_LCD(stopWatch_t *pStopWatchData);
+      |                              ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c: At top level:
+../Core/ap/Presenter/Presenter_StopWatch.c:33:6: error: conflicting types for 'Presenter_StopWatch_FND'; have 'void(stopWatch_t)'
+   33 | void Presenter_StopWatch_FND(stopWatch_t stopWatchData)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.h:20:6: note: previous declaration of 'Presenter_StopWatch_FND' with type 'void(stopWatch_t *)'
+   20 | void Presenter_StopWatch_FND(stopWatch_t *pStopWatchData);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:51:6: error: conflicting types for 'Presenter_StopWatch_LCD'; have 'void(stopWatch_t)'
+   51 | void Presenter_StopWatch_LCD(stopWatch_t stopWatchData)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.h:21:6: note: previous declaration of 'Presenter_StopWatch_LCD' with type 'void(stopWatch_t *)'
+   21 | void Presenter_StopWatch_LCD(stopWatch_t *pStopWatchData);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/ap/Presenter/subdir.mk:22: Core/ap/Presenter/Presenter_StopWatch.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:18:37 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter.d" -MT"Core/ap/Presenter/Presenter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter.o"
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
+ 
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
+   text	   data	    bss	    dec	    hex	filename
+  28784	    192	  18592	  47568	   b9d0	250703_RTOS_StopWatch2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250703_RTOS_StopWatch2.list
+ 
+16:27:20 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:55:12: warning: 'stopwatch_state' is used uninitialized [-Wuninitialized]
+   55 |         if (stopwatch_state == S_STOPWATCH_RUN){
+      |            ^
+../Core/ap/Presenter/Presenter_StopWatch.c:53:27: note: 'stopwatch_state' was declared here
+   53 |         eStopWatchState_t stopwatch_state;
+      |                           ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
+ 
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
+   text	   data	    bss	    dec	    hex	filename
+  28912	    192	  18592	  47696	   ba50	250703_RTOS_StopWatch2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250703_RTOS_StopWatch2.list
+ 
+16:30:02 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+arm-none-eabi-gcc "../Core/ap/Controller/StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Controller/StopWatch.d" -MT"Core/ap/Controller/StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Controller/StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:58:18: error: 'stopwatch_state' undeclared (first use in this function); did you mean 'stopWatchData'?
+   58 |         else if (stopwatch_state == S_STOPWATCH_STOP){
+      |                  ^~~~~~~~~~~~~~~
+      |                  stopWatchData
+../Core/ap/Presenter/Presenter_StopWatch.c:58:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/ap/Presenter/subdir.mk:22: Core/ap/Presenter/Presenter_StopWatch.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:30:27 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:55:12: warning: 'st' is used uninitialized [-Wuninitialized]
+   55 |         if (st == S_STOPWATCH_RUN){
+      |            ^
+../Core/ap/Presenter/Presenter_StopWatch.c:53:27: note: 'st' was declared here
+   53 |         eStopWatchState_t st;
+      |                           ^~
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
+ 
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
+   text	   data	    bss	    dec	    hex	filename
+  28960	    192	  18592	  47744	   ba80	250703_RTOS_StopWatch2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250703_RTOS_StopWatch2.list
+ 
+16:32:51 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter.d" -MT"Core/ap/Presenter/Presenter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter.o"
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatchExecute':
+../Core/ap/Presenter/Presenter_StopWatch.c:30:17: error: too few arguments to function 'Presenter_StopWatch_LCD'
+   30 |                 Presenter_StopWatch_LCD(stopWatchData);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/ap/Presenter/Presenter_StopWatch.c:8:
+../Core/ap/Presenter/Presenter_StopWatch.h:21:6: note: declared here
+   21 | void Presenter_StopWatch_LCD(stopWatch_t stopWatchData, eStopWatchState_t st);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/ap/Presenter/subdir.mk:22: Core/ap/Presenter/Presenter_StopWatch.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:33:16 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter.d" -MT"Core/ap/Presenter/Presenter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter.o"
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:53:29: error: expected ';' before 'char'
+   53 |         eStopWatchState_t st
+      |                             ^
+      |                             ;
+   54 |         char str[50];
+      |         ~~~~                 
+../Core/ap/Presenter/Presenter_StopWatch.c:55:13: error: 'st' undeclared (first use in this function); did you mean 'str'?
+   55 |         if (st == S_STOPWATCH_RUN){
+      |             ^~
+      |             str
+../Core/ap/Presenter/Presenter_StopWatch.c:55:13: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/ap/Presenter/subdir.mk:22: Core/ap/Presenter/Presenter_StopWatch.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:33:31 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:55:12: warning: 'st' is used uninitialized [-Wuninitialized]
+   55 |         if (st == S_STOPWATCH_RUN){
+      |            ^
+../Core/ap/Presenter/Presenter_StopWatch.c:53:27: note: 'st' was declared here
+   53 |         eStopWatchState_t st;
+      |                           ^~
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
+ 
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
+   text	   data	    bss	    dec	    hex	filename
+  28960	    192	  18592	  47744	   ba80	250703_RTOS_StopWatch2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250703_RTOS_StopWatch2.list
+ 
+16:35:29 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter.d" -MT"Core/ap/Presenter/Presenter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter.o"
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatchExecute':
+../Core/ap/Presenter/Presenter_StopWatch.c:30:56: error: expected expression before 'eStopWatchState_t'
+   30 |                 Presenter_StopWatch_LCD(stopWatchData, eStopWatchState_t st);
+      |                                                        ^~~~~~~~~~~~~~~~~
+make: *** [Core/ap/Presenter/subdir.mk:22: Core/ap/Presenter/Presenter_StopWatch.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:37:28 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter.d" -MT"Core/ap/Presenter/Presenter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter.o"
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
+ 
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
+   text	   data	    bss	    dec	    hex	filename
+  28960	    192	  18592	  47744	   ba80	250703_RTOS_StopWatch2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250703_RTOS_StopWatch2.list
+ 
+16:39:31 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
+ 
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
+   text	   data	    bss	    dec	    hex	filename
+  28960	    192	  18592	  47744	   ba80	250703_RTOS_StopWatch2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250703_RTOS_StopWatch2.list
+ 
+16:40:44 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Controller/StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Controller/StopWatch.d" -MT"Core/ap/Controller/StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Controller/StopWatch.o"
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
+ 
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
+   text	   data	    bss	    dec	    hex	filename
+  28960	    192	  18592	  47744	   ba80	250703_RTOS_StopWatch2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250703_RTOS_StopWatch2.list
+ 
+16:50:58 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
+ 
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
+   text	   data	    bss	    dec	    hex	filename
+  29000	    192	  18592	  47784	   baa8	250703_RTOS_StopWatch2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250703_RTOS_StopWatch2.list
+ 
+16:52:35 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch2.elf
+ 
+arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
+   text	   data	    bss	    dec	    hex	filename
+  29016	    192	  18592	  47800	   bab8	250703_RTOS_StopWatch2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250703_RTOS_StopWatch2.list
  

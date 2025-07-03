@@ -1,0 +1,33 @@
+/*
+ * Model.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+
+#include "Model_StopWatch.h"
+
+typedef enum { S_STOPWATCH_STOP, S_STOPWATCH_RUN, S_STOPWATCH_CLEAR } eStopWatchState_t;
+
+typedef struct {
+	uint8_t hour;
+	uint8_t min;
+	uint8_t sec;
+	uint16_t msec;
+}stopWatch_t;
+
+
+
+static eStopWatchState_t StopWatchState = S_STOPWATCH_STOP;
+
+void Model_SetStopWatchState(eStopWatchState_t state)
+{
+	StopWatchState = state;
+}
+
+eStopWatchState_t Model_GetStopWatchState()
+{
+	return StopWatchState;
+}
+

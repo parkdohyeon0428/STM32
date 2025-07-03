@@ -1,3 +1,0 @@
-../Core/ap/src/Listener.c:10:6:Listener_Init	8	static
-../Core/ap/src/Listener.c:17:6:Listener_Excute	8	static
-../Core/ap/src/Listener.c:22:6:Listener_CheckButton	16	static

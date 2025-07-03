@@ -1,44 +1,10 @@
-14:44:32 **** Build of configuration Debug for project 250619_counter ****
+16:17:23 **** Incremental Build of configuration Debug for project 250619_counter ****
 make -j16 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411retx.d" -MT"Startup/startup_stm32f411retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411retx.o" "../Startup/startup_stm32f411retx.s"
-arm-none-eabi-gcc "../Src/driver/fnd/fnd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/driver/fnd/fnd.d" -MT"Src/driver/fnd/fnd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/driver/fnd/fnd.o"
-arm-none-eabi-gcc "../Src/driver/SystemClock/SystemClock.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/driver/SystemClock/SystemClock.d" -MT"Src/driver/SystemClock/SystemClock.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/driver/SystemClock/SystemClock.o"
-arm-none-eabi-gcc "../Src/driver/Led_Bar/LED_Bar.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/driver/Led_Bar/LED_Bar.d" -MT"Src/driver/Led_Bar/LED_Bar.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/driver/Led_Bar/LED_Bar.o"
-arm-none-eabi-gcc "../Src/driver/GPIO/GPIO.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/driver/GPIO/GPIO.d" -MT"Src/driver/GPIO/GPIO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/driver/GPIO/GPIO.o"
-arm-none-eabi-gcc "../Src/driver/Button/Button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/driver/Button/Button.d" -MT"Src/driver/Button/Button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/driver/Button/Button.o"
-arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"D:/STM32/250619_counter/Src/driver/SystemClock" -I"D:/STM32/250619_counter/Src/driver/Led_Bar" -I"D:/STM32/250619_counter/Src/driver/GPIO" -I"D:/STM32/250619_counter/Src/driver/fnd" -I"D:/STM32/250619_counter/Src/driver/Button" -I"D:/STM32/250619_counter/Src/driver" -I"D:/STM32/250619_counter/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-../Src/driver/fnd/fnd.c: In function 'FND_DisplayNumber':
-../Src/driver/fnd/fnd.c:190:7: warning: implicit declaration of function 'delay' [-Wimplicit-function-declaration]
-  190 |       delay(1);
-      |       ^~~~~
-../Src/main.c: In function 'main':
-../Src/main.c:10:9: warning: implicit declaration of function 'fnd_Init' [-Wimplicit-function-declaration]
-   10 |         fnd_Init();
-      |         ^~~~~~~~
-../Src/ap/ap_main.c: In function 'ap_main':
-../Src/ap/ap_main.c:34:9: warning: implicit declaration of function 'FND_DisplayNumber' [-Wimplicit-function-declaration]
-   34 |         FND_DisplayNumber(data);
-      |         ^~~~~~~~~~~~~~~~~
-../Src/ap/ap_main.c:47:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
-   47 |                 if (Button_GetState(&hBtnStop) == ACT_RELEASED)
-      |                 ^~
-../Src/ap/ap_main.c:49:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
-   49 |                         break;
-      |                         ^~~~~
-arm-none-eabi-gcc -o "250619_counter.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250619_counter\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250619_counter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250619_counter.elf
- 
 arm-none-eabi-size  250619_counter.elf 
-arm-none-eabi-objdump -h -S 250619_counter.elf  > "250619_counter.list"
    text	   data	    bss	    dec	    hex	filename
    3132	     96	   1600	   4828	   12dc	250619_counter.elf
 Finished building: default.size.stdout
  
-Finished building: 250619_counter.list
- 
 
-14:44:32 Build Finished. 0 errors, 4 warnings. (took 543ms)
+16:17:23 Build Finished. 0 errors, 0 warnings. (took 131ms)
 
