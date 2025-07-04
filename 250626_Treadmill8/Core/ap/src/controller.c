@@ -40,10 +40,6 @@ void controller_dht()
 	}
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c5e2177baf5a1e8cbf405a7999dd8b645e2072e5
 void controller_treadmill()
 {
 

@@ -1,0 +1,3 @@
+../Core/ap/Controller/TempHumi.c:15:6:TempHumi_Init	1
+../Core/ap/Controller/TempHumi.c:24:6:TempHumi_Execute	1
+../Core/ap/Controller/TempHumi.c:29:6:TempHumi_Measurement	5

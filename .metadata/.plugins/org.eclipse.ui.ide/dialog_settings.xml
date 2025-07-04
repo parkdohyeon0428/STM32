@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\STM32\250704_RTOS_StopWatch_TimeWatch"/>
 			<item value="D:\STM32\20250626_treadmill1"/>
 			<item value="D:\STM32\20250623_Timewatch_Stopwatch111"/>
 		</list>

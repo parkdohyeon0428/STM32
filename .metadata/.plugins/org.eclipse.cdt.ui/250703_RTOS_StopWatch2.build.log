@@ -1,17 +1,10 @@
-16:52:35 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
+15:12:14 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch2 ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/Button" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LedBar" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/LCD" -I"D:/STM32/250703_RTOS_StopWatch2/Core/driver/FND" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Controller" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Listener" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Model" -I"D:/STM32/250703_RTOS_StopWatch2/Core/ap/Presenter" -I"D:/STM32/250703_RTOS_StopWatch2/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
-arm-none-eabi-gcc -o "250703_RTOS_StopWatch2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\250703_RTOS_StopWatch2\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250703_RTOS_StopWatch2.elf
- 
 arm-none-eabi-size  250703_RTOS_StopWatch2.elf 
-arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch2.elf  > "250703_RTOS_StopWatch2.list"
    text	   data	    bss	    dec	    hex	filename
-  29016	    192	  18592	  47800	   bab8	250703_RTOS_StopWatch2.elf
+  28960	    192	  18592	  47744	   ba80	250703_RTOS_StopWatch2.elf
 Finished building: default.size.stdout
  
-Finished building: 250703_RTOS_StopWatch2.list
- 
 
-16:52:36 Build Finished. 0 errors, 0 warnings. (took 588ms)
+15:12:14 Build Finished. 0 errors, 0 warnings. (took 336ms)
 

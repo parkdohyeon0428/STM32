@@ -1,0 +1,29 @@
+/*
+ * Distance.c
+ *
+ *  Created on: Jul 4, 2025
+ *      Author: kccistc
+ */
+
+#include "Distance.h"
+
+Distance_t distanceData;
+
+void Distance_Init()
+{
+	distanceData.distance = 0;
+
+	Distance_t *pDistanceData = osMailAlloc(DistanceDataMailBox, 0);
+	memcpy(pDistanceData, &DistanceData, sizeof(Distance_t));
+	osMailPut(DistanceDataMailBox, pDistanceData);
+}
+
+void Distance_Execute()
+{
+	Distance_Measurement();
+}
+
+void Distance_Measurement()
+{
+
+}
