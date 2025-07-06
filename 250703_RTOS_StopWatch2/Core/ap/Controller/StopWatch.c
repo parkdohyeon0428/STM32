@@ -46,8 +46,8 @@ void StopWatch_Stop()
 	osEvent evt = osMessageGet(stopWatchEventMsgBox, 0);
 	uint16_t evtState;
 
-	if (evt.status == osEventMessage) {
-		evtState = evt.value.v; // 메세지가 들어있다면 값을 받아오겠다.
+	if (evt.status == osEventMessage) { // 메세지가 들어있다면
+		evtState = evt.value.v; // 메세지 값 // 값을 받아오겠다.
 
 		if (evtState == EVENT_RUN_STOP) {
 			Model_SetStopWatchState(S_STOPWATCH_RUN);
