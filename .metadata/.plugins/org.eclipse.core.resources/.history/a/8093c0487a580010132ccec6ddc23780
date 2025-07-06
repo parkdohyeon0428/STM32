@@ -1,0 +1,29 @@
+/*
+ * Controller.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+#include "Controller.h"
+
+void Controller_Init()
+{
+	TimeWatch_Init();
+	StopWatch_Init();
+}
+
+void Controller_Execute()
+{
+	eModeState_t state = Model_GetModeState();
+
+	switch (state)
+	{
+	case S_TIMEWATCH_MODE:
+		TimeWatch_Execute();
+		break;
+	case S_STOPWATCH_MODE:
+		StopWatch_Execute();
+		break;
+	}
+}

@@ -3,6 +3,8 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="true"/>
 	<list key="searchhistory">
+		<item value="stop"/>
+		<item value="stopWatchData"/>
 		<item value="htim4"/>
 		<item value="-&gt;"/>
 		<item value="TIM4"/>
@@ -16,10 +18,10 @@
 		<item value="TIM2"/>
 		<item value="DISpaly"/>
 		<item value="AHB1ENR"/>
-		<item value="BK"/>
-		<item value="core"/>
 	</list>
 	<list key="replacehistory">
+		<item value="time"/>
+		<item value="timeWatchData"/>
 		<item value="htim5"/>
 		<item value="."/>
 	</list>

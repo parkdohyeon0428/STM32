@@ -1,4 +1,4 @@
-16:17:26 **** Incremental Build of configuration Debug for project 250701_ARM_LedBilnk ****
+15:12:12 **** Incremental Build of configuration Debug for project 250701_ARM_LedBilnk ****
 make -j16 all 
 arm-none-eabi-size  250701_ARM_LedBilnk.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  250701_ARM_LedBilnk.elf
 Finished building: default.size.stdout
  
 
-16:17:26 Build Finished. 0 errors, 0 warnings. (took 181ms)
+15:12:13 Build Finished. 0 errors, 0 warnings. (took 234ms)
 

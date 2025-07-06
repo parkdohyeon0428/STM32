@@ -1,0 +1,40 @@
+/*
+ * Presenter.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+#include "Presenter.h"
+
+void Presenter_Init()
+{
+	Presenter_StopWatchInit();
+	Presenter_TimeWatchInit();
+}
+
+void Presenter_Execute()
+{
+	static eModeState_t prevstate;
+	eModeState_t state = Model_GetModeState();
+	if (prevState != state) {
+		char str[30];
+		prevState = state;
+		if (state == S_TIMEWATCH_MODE) {
+			sprintf(str, "TimeWatch :       ");
+		}
+		else if (stopWatchState == S_STOPWATCH_MODE) {
+			sprintf(str, "StopWatch :         ")
+		}
+		LCD_writeStringXY(0, 11, str);
+	}
+
+	switch(state)
+	{
+	case S_TIMEWATCH_MODE:
+		Presenter_TimeWatchExecute();
+		break;
+	case S_STOPWATCH_MODE:
+		Presenter_StopWatchExecute();
+		break;
+	}
+}

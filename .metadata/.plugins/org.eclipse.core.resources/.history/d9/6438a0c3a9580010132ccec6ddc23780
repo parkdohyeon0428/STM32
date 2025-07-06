@@ -1,0 +1,2 @@
+../Core/ap/Listener/Listener_TempHumi.c:11:6:Listener_TempHumiInit	1
+../Core/ap/Listener/Listener_TempHumi.c:16:6:Listener_TempHumiExecute	1

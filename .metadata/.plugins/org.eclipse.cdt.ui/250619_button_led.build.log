@@ -1,4 +1,4 @@
-16:17:23 **** Incremental Build of configuration Debug for project 250619_button_led ****
+15:12:08 **** Incremental Build of configuration Debug for project 250619_button_led ****
 make -j16 all 
 arm-none-eabi-size  250619_button_led.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  250619_button_led.elf
 Finished building: default.size.stdout
  
 
-16:17:23 Build Finished. 0 errors, 0 warnings. (took 132ms)
+15:12:08 Build Finished. 0 errors, 0 warnings. (took 182ms)
 

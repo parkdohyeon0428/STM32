@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;250704_RTOS_Module/20250704_RTOS_StopWatch_TimeWatch.ioc&apos; to &apos;20250704_RTOS_Module.ioc&apos;" description="Rename resource &apos;20250704_RTOS_StopWatch_TimeWatch.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="20250704_RTOS_StopWatch_TimeWatch.ioc" name="20250704_RTOS_Module.ioc" stamp="1751614666680" updateReferences="true"/>
+</session>
